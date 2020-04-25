@@ -1,0 +1,4 @@
+[debug] Copy resource mappings: 
+[debug] 	(C:\Users\zeron\IdeaProjects\sklep\conf\application.conf,C:\Users\zeron\IdeaProjects\sklep\target\scala-2.12\classes\application.conf)
+[debug] 	(C:\Users\zeron\IdeaProjects\sklep\conf\logback.xml,C:\Users\zeron\IdeaProjects\sklep\target\scala-2.12\classes\logback.xml)
+[debug] 	(C:\Users\zeron\IdeaProjects\sklep\conf\routes,C:\Users\zeron\IdeaProjects\sklep\target\scala-2.12\classes\routes)
