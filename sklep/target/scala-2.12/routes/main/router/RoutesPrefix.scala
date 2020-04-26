@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/Users/zeron/IdeaProjects/sklep/conf/routes
-// @DATE:Thu Apr 23 19:12:48 CEST 2020
+// @SOURCE:D:/ebiznes/sklep/conf/routes
+// @DATE:Sun Apr 26 18:37:46 CEST 2020
 
 
 package router {

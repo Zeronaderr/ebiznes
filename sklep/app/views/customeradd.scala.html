@@ -1,0 +1,21 @@
+@(customer: Form[CreateCustomerForm],addresses: Seq[Address])(implicit request: MessagesRequestHeader, flash: Flash)
+
+@import helper._
+
+@flash.get("success").getOrElse("")
+
+@form(routes.CustomerController.addCustomerHandle()) {
+    @helper.CSRF.formField
+    @inputText(customer("firstName"))
+    @inputText(customer("lastName"))
+
+    <select name="addressId" id="addressId">
+    @for(adr <- addresses){
+        <option value="@adr.id">@adr.address</option>
+    }
+    </select>
+
+    <div class="buttons">
+        <input type="submit" value="Add Customer"/>
+    </div>
+}

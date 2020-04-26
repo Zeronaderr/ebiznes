@@ -1,0 +1,15 @@
+@(address: Form[CreateAddressForm])(implicit request: MessagesRequestHeader, flash: Flash)
+
+@import helper._
+
+@flash.get("success").getOrElse("")
+
+@form(routes.AddressController.addAddressHandle()) {
+    @helper.CSRF.formField
+    @inputText(address("address"))
+
+
+    <div class="buttons">
+        <input type="submit" value="Add Address"/>
+    </div>
+}

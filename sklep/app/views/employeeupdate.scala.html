@@ -1,0 +1,22 @@
+@(employee: Form[UpdateEmployeeForm],addresses: Seq[Address])(implicit request: MessagesRequestHeader, flash: Flash)
+
+@import helper._
+
+@flash.get("success").getOrElse("")
+
+@form(routes.EmployeeController.updateEmployeeHandle) {
+    @helper.CSRF.formField
+    <input name="id" id="id" value="@employee("id").value" type="hidden" />
+    @inputText(employee("firstName"))
+    @inputText(employee("lastName"))
+
+    <select name="addressId" id="addressId">
+    @for(address <- addresses){
+        <option value="@address.id">@address.address</option>
+    }
+    </select>
+
+    <div class="buttons">
+        <input type="submit" value="Update Employee"/>
+    </div>
+}

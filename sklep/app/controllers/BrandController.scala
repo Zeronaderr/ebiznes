@@ -1,40 +1,99 @@
 package controllers
 
 import javax.inject.Inject
-import play.api.mvc.{AbstractController, ControllerComponents}
+import models.{ProductCategoryRepository, Brand, BrandRepository}
+import play.api.mvc.{AbstractController, ControllerComponents, MessagesAbstractController, MessagesControllerComponents}
 import play.mvc.Action
+import play.api.data.Form
+import play.api.data.Forms._
+import play.api.data.Forms.mapping
+import play.api.libs.json.{JsError, JsSuccess, JsValue, Json, OWrites}
+import play.api.mvc.{AbstractController, ControllerComponents, MessagesAbstractController, MessagesControllerComponents}
 import play.mvc.BodyParser.AnyContent
 
-class BrandController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
+import scala.concurrent.{ExecutionContext, Future}
 
-  def getBrand(id: Long) = Action {
-    var Brand = null // get Brand from db
-    Ok(views.html.index("Brand for id = " + id))
+class BrandController @Inject()(brands: BrandRepository, cc: MessagesControllerComponents)(implicit ec: ExecutionContext) extends MessagesAbstractController(cc) {
+
+  def updateBrand(id:Int) = Action.async { implicit request =>
+    var BrandForUpdate = brands.getById(id)
+    BrandForUpdate.map(c => {
+      val catForm = updateBrandForm.fill(UpdateBrandForm(c.id,c.name))
+      Ok(views.html.brandupdate(catForm))
+    })
+  }
+  def updateBrandHandle = Action.async { implicit request =>
+    updateBrandForm.bindFromRequest.fold(
+      errorForm => {
+        Future.successful(
+          BadRequest(views.html.brandupdate(errorForm))
+        )
+      },
+      brand => {
+        brands.update(brand.id, Brand(brand.id,brand.name)).map {_ =>
+          Redirect(routes.BrandController.updateBrand(brand.id)).flashing("success" -> "Brand updated")
+        }
+      }
+    )
+  }
+  def deleteBrand(id: Int) = Action {implicit request =>
+    brands.delete(id)
+    Redirect("/api/brands")
   }
 
-  def getBrands() = Action {
-    var Brandsrepo = null // get all Brands
-    Ok(views.html.index("All Brands list"))
+  def addBrand() = Action { implicit request =>
+    Ok(views.html.brandadd(createBrandForm))
   }
 
-  def updateBrand(id: Long) = Action {
-    var BrandForUpdate = null // get by id
-    // update values
-    // save
-    Ok(views.html.index("Brand of id = " + id + " updated"))
+  def addBrandHandle() = Action.async { implicit request =>
+    createBrandForm.bindFromRequest.fold(
+      errorForm => {
+        Future.successful(
+          BadRequest(views.html.brandadd(errorForm))
+        )
+      },
+      brand => {
+        brands.create(brand.name).map { _ =>
+          Redirect(routes.BrandController.addBrand()).flashing("success" -> "product added")
+        }
+      }
+    )
   }
 
-  def deleteBrand(id: Long) = Action {
-    var BrandToDelete = null // get from db
-    // delete Brand
-    // Save
-    Ok(views.html.index("Brand of id = " + id + " deleted"))
+  val updateBrandForm: Form[UpdateBrandForm] = Form {
+    mapping(
+      "id" -> number,
+      "name" -> nonEmptyText,
+    )(UpdateBrandForm.apply)(UpdateBrandForm.unapply)
   }
 
-  def addBrand() = Action {
-    var BrandToAdd = null
-    // add to db
-    // save
-    Ok(views.html.index("Brand added"))
+  val createBrandForm: Form[CreateBrandForm] = Form {
+    mapping(
+      "name" -> nonEmptyText,
+    )(CreateBrandForm.apply)(CreateBrandForm.unapply)
   }
+
+  //  REST API
+  def getBrandsApi = Action.async {implicit request =>
+    val brand = brands.list()
+    brand.map(p =>
+      Ok(Json.toJson(p))
+    )
+  }
+  def getBrandApi(id: Int) = Action.async {implicit request =>
+    val brand = brands.getByIdAsync(id)
+    brand.map(x => x match {
+      case Some(p) => Ok(Json.toJson(p))
+    })
+  }
+  def addBrandApi = Action { implicit request =>
+    val req = request.body.asJson.get
+    var brand:Brand = req.as[Brand]
+    brands.create(brand.name)
+    Ok(request.body.asJson.get)
+  }
+
+
 }
+case class UpdateBrandForm(id: Int, name: String)
+case class CreateBrandForm(name: String)

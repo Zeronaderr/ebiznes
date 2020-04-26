@@ -1,5 +1,10 @@
 package models
 
+import play.api.libs.json.Json
 
-class Shipper {
+
+case class Shipper(id: Int,name: String)
+object Shipper
+{
+  implicit val shipperFormat = Json.format[Shipper]
 }

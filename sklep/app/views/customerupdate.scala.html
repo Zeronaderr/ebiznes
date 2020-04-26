@@ -1,0 +1,28 @@
+@(customer: Form[UpdateCustomerForm],addresses: Seq[Address])(implicit request: MessagesRequestHeader, flash: Flash)
+
+@import helper._
+
+@flash.get("success").getOrElse("")
+
+@form(routes.CustomerController.updateCustomerHandle) {
+    @helper.CSRF.formField
+    <input name="id" id="id" value="@customer("id").value" type="hidden" />
+    @inputText(customer("firstName"))
+    @inputText(customer("lastName"))
+
+    <select name="addressId" id="addressId">
+    @for(address <- addresses){
+        @if(address.id.toString==customer("addressId").value.getOrElse(0)) {
+            <option value="@address.id" selected>@address.address</option>
+        }
+        else{
+            <option value="@address.id">@address.address</option>
+        }
+    }
+    </select>
+
+
+    <div class="buttons">
+        <input type="submit" value="Update Category"/>
+    </div>
+}

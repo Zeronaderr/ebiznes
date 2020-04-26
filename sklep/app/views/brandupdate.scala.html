@@ -1,0 +1,15 @@
+@(brand: Form[UpdateBrandForm])(implicit request: MessagesRequestHeader, flash: Flash)
+
+@import helper._
+
+@flash.get("success").getOrElse("")
+
+@form(routes.BrandController.updateBrandHandle) {
+    @helper.CSRF.formField
+    <input name="id" id="id" value="@brand("id").value" type="hidden" />
+    @inputText(brand("name"))
+
+    <div class="buttons">
+        <input type="submit" value="Update Category"/>
+    </div>
+}

@@ -1,0 +1,15 @@
+@(discount: Form[UpdateDiscountForm])(implicit request: MessagesRequestHeader, flash: Flash)
+
+@import helper._
+
+@flash.get("success").getOrElse("")
+
+@form(routes.DiscountController.updateDiscountHandle) {
+    @helper.CSRF.formField
+    <input name="id" id="id" value="@discount("id").value" type="hidden" />
+    @inputText(discount("value"))
+
+    <div class="buttons">
+        <input type="submit" value="Update Discount"/>
+    </div>
+}

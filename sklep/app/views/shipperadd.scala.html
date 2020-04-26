@@ -1,0 +1,15 @@
+@(shipper: Form[CreateShipperForm])(implicit request: MessagesRequestHeader, flash: Flash)
+
+@import helper._
+
+@flash.get("success").getOrElse("")
+
+@form(routes.ShipperController.addShipperHandle()) {
+    @helper.CSRF.formField
+    @inputText(shipper("name"))
+
+
+    <div class="buttons">
+        <input type="submit" value="Add Shipper"/>
+    </div>
+}

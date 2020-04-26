@@ -6,65 +6,97 @@
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
 # PRODUCTS
+    #API
+    POST    /api/addproduct            controllers.ProductController.addProductApi
+    GET     /api/product/:id            controllers.ProductController.getProductApi(id: Int)
+    GET     /api/products            controllers.ProductController.getProductsApi
+    #ENDAPI
 GET     /product/:id                controllers.ProductController.getProduct(id: Long)
-GET     /products                   controllers.ProductController.getProducts()
-PUT     /updateproduct/:id          controllers.ProductController.updateProduct(id: Long)
-POST    /addproduct                 controllers.ProductController.addProduct()
-DELETE  /deleteproduct/:id          controllers.ProductController.deleteProduct(id: Long)
+GET     /products                   controllers.ProductController.getProducts
+GET     /updateproduct/:id          controllers.ProductController.updateProduct(id: Long)
+GET     /addproduct                 controllers.ProductController.addProduct
+POST    /addproducthandle           controllers.ProductController.addProductHandle
+POST    /updateproducthandle        controllers.ProductController.updateProductHandle
+GET  /deleteproduct/:id          controllers.ProductController.deleteProduct(id: Long)
 # addresses
-GET     /address/:id                controllers.AddressController.getAddress(id: Long)
-GET     /addresses                   controllers.AddressController.getAddresses()
-PUT     /updateaddres/:id          controllers.AddressController.updateAddress(id: Long)
-POST    /addaddress                 controllers.AddressController.addAddress()
-DELETE  /deleteaddress/:id          controllers.AddressController.deleteAddress(id: Long)
+    #API
+    POST    /api/addaddress            controllers.AddressController.addAddressApi
+    GET     /api/address/:id            controllers.AddressController.getAddressApi(id: Int)
+    GET     /api/addresses            controllers.AddressController.getAddressesApi
+    #ENDAPI
+POST    /addaddresshandle           controllers.AddressController.addAddressHandle()
+POST    /updateaddresshandle           controllers.AddressController.updateAddressHandle()
+GET     /updateaddres/:id          controllers.AddressController.updateAddress(id: Int)
+GET    /addaddress                 controllers.AddressController.addAddress()
+GET  /deleteaddress/:id          controllers.AddressController.deleteAddress(id: Int)
 # brands
-GET     /brand/:id                controllers.BrandController.getBrand(id: Long)
-GET     /brands                   controllers.BrandController.getBrands()
-PUT     /updateaddress/:id          controllers.BrandController.updateBrand(id: Long)
-POST    /addbrand                 controllers.BrandController.addBrand()
-DELETE  /deletebrand/:id          controllers.BrandController.deleteBrand(id: Long)
+    GET     /api/brand/:id                controllers.BrandController.getBrandApi(id: Int)
+    GET     /api/brands                   controllers.BrandController.getBrandsApi
+    POST    /api/addbrand                   controllers.BrandController.addBrandApi
+POST    /updatebrandhandle        controllers.BrandController.updateBrandHandle()
+POST    /addbrandhandle           controllers.BrandController.addBrandHandle()
+GET     /updatebrand/:id          controllers.BrandController.updateBrand(id: Int)
+GET    /addbrand                 controllers.BrandController.addBrand()
+GET  /deletebrand/:id          controllers.BrandController.deleteBrand(id: Int)
 # customers
-GET     /customer/:id                controllers.CustomerController.getCustomer(id: Long)
-GET     /customers                   controllers.CustomerController.getCustomers()
-PUT     /updatecustomer/:id          controllers.CustomerController.updateCustomer(id: Long)
-POST    /addcustomer                 controllers.CustomerController.addCustomer()
-DELETE  /deletecustomer/:id          controllers.CustomerController.deleteCustomer(id: Long)
-# discounts
-GET     /discount/:id                controllers.DiscountController.getDiscount(id: Long)
-GET     /discounts                   controllers.DiscountController.getDiscounts()
-PUT     /updatediscount/:id          controllers.DiscountController.updateDiscount(id: Long)
-POST    /adddiscount                 controllers.DiscountController.addDiscount()
-DELETE  /deletediscount/:id          controllers.DiscountController.deleteDiscount(id: Long)
+    GET     /api/customer/:id                controllers.CustomerController.getCustomerApi(id: Int)
+    GET     /api/customers                   controllers.CustomerController.getCustomersApi
+    POST    /api/addcustomer                   controllers.CustomerController.addCustomerApi
+POST    /updatecustomerhandle        controllers.CustomerController.updateCustomerHandle()
+POST    /addcustomerhandle           controllers.CustomerController.addCustomerHandle()
+GET     /updatecustomer/:id          controllers.CustomerController.updateCustomer(id: Int)
+GET    /addcustomer                 controllers.CustomerController.addCustomer()
+GET  /deletecustomer/:id          controllers.CustomerController.deleteCustomer(id: Int)
+# brands
+    GET     /api/discount/:id                controllers.DiscountController.getDiscountApi(id: Int)
+    GET     /api/discounts                   controllers.DiscountController.getDiscountsApi
+    POST    /api/adddiscount                   controllers.DiscountController.addDiscountApi
+POST    /updatediscounthandle        controllers.DiscountController.updateDiscountHandle()
+POST    /adddiscounthandle           controllers.DiscountController.addDiscountHandle()
+GET     /updatediscount/:id          controllers.DiscountController.updateDiscount(id: Int)
+GET    /adddiscount                 controllers.DiscountController.addDiscount()
+GET  /deletediscount/:id          controllers.DiscountController.deleteDiscount(id: Int)
 # orders
-GET     /order/:id                controllers.OrderController.getOrder(id: Long)
-GET     /orders                   controllers.OrderController.getOrders()
-PUT     /updateorder/:id          controllers.OrderController.updateOrder(id: Long)
-POST    /addorder                 controllers.OrderController.addOrder()
-DELETE  /deleteorder/:id          controllers.OrderController.deleteOrder(id: Long)
+    GET     /api/order/:id                controllers.OrderController.getOrderApi(id: Int)
+    GET     /api/orders                   controllers.OrderController.getOrdersApi()
+    POST    /api/addorder                 controllers.OrderController.addOrderApi()
+GET  /deleteorder/:id          controllers.OrderController.deleteOrder(id: Int)
 # shippers
-GET     /shipper/:id                controllers.ShipperController.getShipper(id: Long)
-GET     /shippers                   controllers.ShipperController.getShippers()
-PUT     /updateshipper/:id          controllers.ShipperController.updateShipper(id: Long)
-POST    /addshipper                 controllers.ShipperController.addShipper()
-DELETE  /deleteshipper/:id          controllers.ShipperController.deleteShipper(id: Long)
+    GET     /api/shipper/:id                controllers.ShipperController.getShipperApi(id: Int)
+    GET     /api/shippers                   controllers.ShipperController.getShippersApi()
+    POST    /api/addshipper                   controllers.ShipperController.addShipperApi()
+POST    /updateshipperhandle        controllers.ShipperController.updateShipperHandle()
+POST    /addshipperhandle           controllers.ShipperController.addShipperHandle()
+GET     /updateshipper/:id          controllers.ShipperController.updateShipper(id: Int)
+GET    /addshipper                 controllers.ShipperController.addShipper()
+GET  /deleteshipper/:id          controllers.ShipperController.deleteShipper(id: Int)
 # payments
-GET     /payment/:id                controllers.PaymentController.getPayment(id: Long)
-GET     /payments                   controllers.PaymentController.getPayments()
-PUT     /updatepayment/:id          controllers.PaymentController.updatePayment(id: Long)
-POST    /addpayment                 controllers.PaymentController.addPayment()
-DELETE  /deletepayment/:id          controllers.PaymentController.deletePayment(id: Long)
+    GET     /api/payment/:id                controllers.PaymentController.getPaymentApi(id: Int)
+    GET     /api/payments                   controllers.PaymentController.getPaymentsApi
+    POST    /api/addpayment                 controllers.PaymentController.addPaymentApi()
+GET  /deletepayment/:id          controllers.PaymentController.deletePayment(id: Int)
 # employees
-GET     /employee/:id                controllers.EmployeeController.getEmployee(id: Long)
-GET     /employees                   controllers.EmployeeController.getEmployees()
-PUT     /updateemployee/:id          controllers.EmployeeController.updateEmployee(id: Long)
-POST    /addemployee                 controllers.EmployeeController.addEmployee()
-DELETE  /deleteemployee/:id          controllers.EmployeeController.deleteEmployee(id: Long)
+    GET     /api/employee/:id                controllers.EmployeeController.getEmployeeApi(id: Int)
+    GET     /api/employees                   controllers.EmployeeController.getEmployeesApi
+    POST    /api/addemployee                   controllers.EmployeeController.addEmployeeApi
+POST    /updateemployeehandle        controllers.EmployeeController.updateEmployeeHandle()
+POST    /addemployeehandle           controllers.EmployeeController.addEmployeeHandle()
+GET     /updateemployee/:id          controllers.EmployeeController.updateEmployee(id: Int)
+GET    /addemployee               controllers.EmployeeController.addEmployee()
+GET  /deleteemployee/:id          controllers.EmployeeController.deleteEmployee(id: Int)
 # PRODUCT CATEGORIES
-GET     /productcategory/:id        controllers.ProductCategoryController.getProductCategory(id: Long)
-GET     /productscategories         controllers.ProductCategoryController.getProductCategories()
-PUT     /updateproductcategory/:id          controllers.ProductCategoryController.updateProductCategory(id: Long)
-POST    /addproductcategory                 controllers.ProductCategoryController.addProductCategory()
-DELETE  /deleteproductcategory/:id          controllers.ProductCategoryController.deleteProductCategory(id: Long)
+    #API
+    POST    /api/addproductcategory             controllers.ProductCategoryController.addProductCategoryApi
+    GET     /api/productcategory/:id            controllers.ProductCategoryController.getProductCategoryApi(id: Int)
+    GET     /api/productcategories            controllers.ProductCategoryController.getProductCategoriesApi
+    #ENDAPI
+GET     /productcategory/:id        controllers.ProductCategoryController.getProductCategory(id: Int)
+GET     /productcategories         controllers.ProductCategoryController.getProductCategories()
+GET     /updateproductcategory/:id          controllers.ProductCategoryController.updateProductCategory(id: Int)
+POST    /addproductcategoryhandle           controllers.ProductCategoryController.addProductCategoryHandle()
+GET     /addproductcategory                 controllers.ProductCategoryController.addProductCategory()
+POST    /updateproductcategoryhandle           controllers.ProductCategoryController.updateProductCategoryHandle()
+GET  /deleteproductcategory/:id          controllers.ProductCategoryController.deleteProductCategory(id: Int)
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count
 # An example controller showing how to write asynchronous code

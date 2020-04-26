@@ -1,0 +1,15 @@
+@(shipper: Form[UpdateShipperForm])(implicit request: MessagesRequestHeader, flash: Flash)
+
+@import helper._
+
+@flash.get("success").getOrElse("")
+
+@form(routes.ShipperController.updateShipperHandle) {
+    @helper.CSRF.formField
+    <input name="id" id="id" value="@shipper("id").value" type="hidden" />
+    @inputText(shipper("name"))
+
+    <div class="buttons">
+        <input type="submit" value="Update Category"/>
+    </div>
+}

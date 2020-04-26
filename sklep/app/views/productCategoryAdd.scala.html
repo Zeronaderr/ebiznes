@@ -1,0 +1,14 @@
+@(category: Form[CreateProductCategoryForm])(implicit request: MessagesRequestHeader, flash: Flash)
+
+@import helper._
+
+@flash.get("success").getOrElse("")
+
+@form(routes.ProductCategoryController.addProductCategoryHandle()) {
+    @helper.CSRF.formField
+    @inputText(category("name"))
+
+    <div class="buttons">
+        <input type="submit" value="Add Category"/>
+    </div>
+}

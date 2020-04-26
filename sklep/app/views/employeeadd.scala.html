@@ -1,0 +1,21 @@
+@(employee: Form[CreateEmployeeForm],addresses: Seq[Address])(implicit request: MessagesRequestHeader, flash: Flash)
+
+@import helper._
+
+@flash.get("success").getOrElse("")
+
+@form(routes.EmployeeController.addEmployeeHandle()) {
+    @helper.CSRF.formField
+    @inputText(employee("firstName"))
+    @inputText(employee("lastName"))
+
+    <select name="addressId" id="addressId">
+    @for(adr <- addresses){
+        <option value="@adr.id">@adr.address</option>
+    }
+    </select>
+
+    <div class="buttons">
+        <input type="submit" value="Add Employee"/>
+    </div>
+}
