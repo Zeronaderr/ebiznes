@@ -1,23 +1,27 @@
 package controllers
 
 import javax.inject._
-import models.{Product, ProductCategory, ProductCategoryRepository, ProductRepository}
+import models.{Brand, BrandRepository, Product, ProductCategory, ProductCategoryRepository, ProductRepository}
 import play.api.data.Form
 import play.api.data.Forms._
 import play.api.libs.json.Json
 import play.api.mvc._
 
-import scala.concurrent.{ExecutionContext, Future}
+import scala.concurrent.duration.Duration
+import scala.concurrent.{Await, ExecutionContext, Future}
 import scala.util.{Failure, Success}
 
 @Singleton
-class ProductController @Inject()(productsRepo: ProductRepository, categoryRepo: ProductCategoryRepository,cc: MessagesControllerComponents)(implicit ec: ExecutionContext) extends MessagesAbstractController(cc) {
+class ProductController @Inject()(productsRepo: ProductRepository, categoryRepo: ProductCategoryRepository,brandRepo: BrandRepository,cc: MessagesControllerComponents)(implicit ec: ExecutionContext) extends MessagesAbstractController(cc) {
 
   val productForm: Form[CreateProductForm] = Form {
     mapping(
       "name" -> nonEmptyText,
       "description" -> nonEmptyText,
-      "categoryId" -> number
+      "categoryId" -> number,
+      "price" -> number,
+      "img" -> nonEmptyText,
+      "brandId" -> number
     )(CreateProductForm.apply)(CreateProductForm.unapply)
   }
 
@@ -26,7 +30,10 @@ class ProductController @Inject()(productsRepo: ProductRepository, categoryRepo:
       "id" -> longNumber,
       "name" -> nonEmptyText,
       "description" -> nonEmptyText,
-      "categoryId" -> number
+      "categoryId" -> number,
+      "price" -> number,
+      "img" -> nonEmptyText,
+      "brandId" -> number
     )(UpdateProductForm.apply)(UpdateProductForm.unapply)
   }
 
@@ -37,14 +44,20 @@ class ProductController @Inject()(productsRepo: ProductRepository, categoryRepo:
       case Failure(_) => print("fail")
     }
 
+    var branq:Seq[Brand] = Seq[Brand]()
+    val brands = brandRepo.list().onComplete{
+      case Success(bra) => branq = bra
+      case Failure(_) => print("fail")
+    }
+
     productForm.bindFromRequest.fold(
       errorForm => {
         Future.successful(
-          BadRequest(views.html.productadd(errorForm, categ))
+          BadRequest(views.html.productadd(errorForm, categ,branq))
         )
       },
       product => {
-        productsRepo.create(product.name, product.description, product.categoryId).map { _ =>
+        productsRepo.create(product.name, product.description, product.categoryId,product.price.toFloat,product.img,product.brandId).map { _ =>
           Redirect(routes.ProductController.addProduct()).flashing("success" -> "product.created")
         }
       }
@@ -59,14 +72,20 @@ class ProductController @Inject()(productsRepo: ProductRepository, categoryRepo:
       case Failure(_) => print("fail")
     }
 
+    var branq:Seq[Brand] = Seq[Brand]()
+    val brands = brandRepo.list().onComplete{
+      case Success(bra) => branq = bra
+      case Failure(_) => print("fail")
+    }
+
     updateProductForm.bindFromRequest.fold(
       errorForm => {
         Future.successful(
-          BadRequest(views.html.productupdate(errorForm, categ))
+          BadRequest(views.html.productupdate(errorForm, categ,branq))
         )
       },
       product => {
-        productsRepo.update(product.id, Product(product.id, product.name, product.description, product.categoryId)).map { _ =>
+        productsRepo.update(product.id, Product(product.id, product.name, product.description, product.categoryId,product.price.toFloat,product.img,product.brandId)).map { _ =>
           Redirect(routes.ProductController.updateProduct(product.id)).flashing("success" -> "product updated")
         }
       }
@@ -94,27 +113,34 @@ class ProductController @Inject()(productsRepo: ProductRepository, categoryRepo:
       case Success(c) => cat = c
       case Failure(_) => print("fail")
     }
+    var branq:Seq[Brand] = Seq[Brand]()
+    val brands = brandRepo.list().onComplete{
+      case Success(bra) => branq = bra
+      case Failure(_) => print("fail")
+    }
     productForUpdate.map(product => {
-      val prodForm = updateProductForm.fill(UpdateProductForm(product.id,product.name,product.description,product.categoryId))
-      Ok(views.html.productupdate(prodForm,cat))
+      val prodForm = updateProductForm.fill(UpdateProductForm(product.id,product.name,product.description,
+        product.categoryId,product.price.toInt,product.img,product.brandId))
+      Ok(views.html.productupdate(prodForm,cat,branq))
     })
-    // update values
-    // save
-//    Ok(views.html.index("Product of id = " + id + " updated"))
   }
 
   def deleteProduct(id: Long) = Action {
     productsRepo.delete(id) // get from db
     Redirect("/products")
-    // delete product
-    // Save
-//    Ok(views.html.index("Product of id = " + id + " deleted"))
   }
 
   def addProduct() = Action.async { implicit request =>
-    val categories = categoryRepo.list()
-    categories.map(c => Ok(views.html.productadd(productForm,c)))
-//    Ok(views.html.index("Product added"))
+    var cat: Seq[ProductCategory] = Seq[ProductCategory]()
+    var bra = brandRepo.list();
+    var cats = categoryRepo.list();
+    cats.onComplete {
+      case Success(c) => {
+        cat = c
+      }
+    }
+    Await.result(cats.map(c => bra.map(b => Ok(views.html.productadd(productForm,c,b)))),Duration.Inf);
+
   }
 
   //  REST API
@@ -133,10 +159,10 @@ class ProductController @Inject()(productsRepo: ProductRepository, categoryRepo:
   def addProductApi = Action { implicit request =>
     val req = request.body.asJson.get
     var product:Product = req.as[Product]
-    productsRepo.create(product.name,product.description,product.categoryId)
+    productsRepo.create(product.name,product.description,product.categoryId,product.price,product.img,product.brandId)
     Ok(request.body.asJson.get)
   }
 
 }
-case class CreateProductForm(name: String, description: String, categoryId: Int)
-case class UpdateProductForm(id: Long, name: String, description: String, categoryId: Int)
+case class CreateProductForm(name: String, description: String, categoryId: Int,price: Int,img: String,brandId: Int)
+case class UpdateProductForm(id: Long, name: String, description: String, categoryId: Int,price: Int,img: String,brandId: Int)

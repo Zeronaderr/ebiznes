@@ -1,12 +1,13 @@
 package models
 
-import javax.inject.{ Inject, Singleton }
+import javax.inject.{Inject, Singleton}
 import play.api.db.slick.DatabaseConfigProvider
 import slick.jdbc.JdbcProfile
-import scala.concurrent.{ Future, ExecutionContext }
+
+import scala.concurrent.{ExecutionContext, Future}
 
 @Singleton
-class ProductRepository @Inject() (dbConfigProvider: DatabaseConfigProvider, categoryRepository: ProductCategoryRepository)(implicit ec: ExecutionContext) {
+class ProductRepository @Inject() (dbConfigProvider: DatabaseConfigProvider, categoryRepository: ProductCategoryRepository, brandRepository: BrandRepository)(implicit ec: ExecutionContext) {
   private val dbConfig = dbConfigProvider.get[JdbcProfile]
 
   import dbConfig._
@@ -26,8 +27,13 @@ class ProductRepository @Inject() (dbConfigProvider: DatabaseConfigProvider, cat
 
     def categoryId = column[Int]("category")
 
-    def category_fk = foreignKey("cat_fk",categoryId, cat)(_.id)
+    def price = column[Float]("price")
 
+    def img = column[String]("img")
+
+    def brandId = column[Int]("brandId")
+
+    def category_fk = foreignKey("cat_fk",categoryId, cat)(_.id)
 
     /**
      * This is the tables default "projection".
@@ -37,7 +43,7 @@ class ProductRepository @Inject() (dbConfigProvider: DatabaseConfigProvider, cat
      * In this case, we are simply passing the id, name and page parameters to the Person case classes
      * apply and unapply methods.
      */
-    def * = (id, name, description, categoryId) <> ((Product.apply _).tupled, Product.unapply)
+    def * = (id, name, description, categoryId,price,img,brandId) <> ((Product.apply _).tupled, Product.unapply)
 
   }
 
@@ -46,11 +52,13 @@ class ProductRepository @Inject() (dbConfigProvider: DatabaseConfigProvider, cat
    */
 
   import categoryRepository.ProductCategoryTable
+  import brandRepository.BrandTable
 
   private val product = TableQuery[ProductTable]
 
   private val cat = TableQuery[ProductCategoryTable]
 
+  private val brands = TableQuery[BrandTable]
 
   /**
    * Create a person with the given name and age.
@@ -58,16 +66,16 @@ class ProductRepository @Inject() (dbConfigProvider: DatabaseConfigProvider, cat
    * This is an asynchronous operation, it will return a future of the created person, which can be used to obtain the
    * id for that person.
    */
-  def create(name: String, description: String, category: Int): Future[Product] = db.run {
+  def create(name: String, description: String, category: Int,price: Float,img: String,brandId: Int): Future[Product] = db.run {
     // We create a projection of just the name and age columns, since we're not inserting a value for the id column
-    (product.map(p => (p.name, p.description,p.categoryId))
+    (product.map(p => (p.name, p.description,p.categoryId,p.price,p.img,p.brandId))
       // Now define it to return the id, because we want to know what id was generated for the person
       returning product.map(_.id)
       // And we define a transformation for the returned value, which combines our original parameters with the
       // returned id
-      into {case ((name,description,category),id) => Product(id,name, description,category)}
+      into {case ((name,description,category,price,img,brandId),id) => Product(id,name, description,category,price,img,brandId)}
       // And finally, insert the product into the database
-      ) += (name, description,category)
+      ) += (name, description,category,price,img,brandId)
   }
 
   /**

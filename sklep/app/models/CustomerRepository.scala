@@ -27,7 +27,6 @@ class CustomerRepository @Inject() (dbConfigProvider: DatabaseConfigProvider)(im
     (customerRepo.map(c => (c.firstName,c.lastName,c.addressId))
       returning customerRepo.map(_.id)
       into {case ((firstName,lastName,addressId),id) => Customer(id,firstName, lastName,addressId)}
-      // And finally, insert the product into the database
       ) += (firstName,lastName,addressId)
   }
 

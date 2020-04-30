@@ -36,7 +36,7 @@ class OrderController @Inject()(orderRepo: OrderRepository, cc: MessagesControll
   def addOrderApi = Action { implicit request =>
     val req = request.body.asJson.get
     var Order:Order = req.as[Order]
-    orderRepo.create(Order.customerId,Order.productId)
+    orderRepo.create(Order.customerId,Order.productId,Order.shipperId)
     Ok(request.body.asJson.get)
   }
 

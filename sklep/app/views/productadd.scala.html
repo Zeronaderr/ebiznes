@@ -1,4 +1,4 @@
-@(product: Form[CreateProductForm],category: Seq[ProductCategory])(implicit request: MessagesRequestHeader, flash: Flash)
+@(product: Form[CreateProductForm],category: Seq[ProductCategory],brands: Seq[Brand])(implicit request: MessagesRequestHeader, flash: Flash)
 
 @import helper._
 
@@ -8,10 +8,18 @@
     @helper.CSRF.formField
     @inputText(product("name"))
     @inputText(product("description"))
+    @inputText(product("price"))
+    @inputText(product("img"))
 
     <select name="categoryId" id="categoryId">
     @for(cat <- category){
         <option value="@cat.id">@cat.name</option>
+    }
+    </select>
+
+    <select name="brandId" id="brandId">
+    @for(bra <- brands){
+        <option value="@bra.id">@bra.name</option>
     }
     </select>
 

@@ -117,7 +117,7 @@ class CustomerController @Inject()(customersRepo: CustomerRepository, addresses:
   def addCustomerApi = Action { implicit request =>
     val req = request.body.asJson.get
     var customer:Customer = req.as[Customer]
-    customersRepo.create(customer.firstName,customer.firstName,customer.addressId)
+    customersRepo.create(customer.firstName,customer.lastName,customer.addressId)
     Ok(request.body.asJson.get)
   }
 

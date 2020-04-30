@@ -1,49 +1,37 @@
-import React, { useState, useEffect, Fragment } from 'react';
-import axios from 'axios';
+import React, {useContext , useState, useEffect, Fragment } from 'react';
 import './App.css';
 import { Container } from 'semantic-ui-react';
-import { ProductCategoryList } from './features/productCategories/list/ProductCategoryList';
 import { IProductCategory } from './app/modules/productCategory';
 import { IProduct } from './app/modules/product';
-import { ProductList } from './features/products/list/ProductList';
-
+import NavBar from './features/nav/NavBar';
+import { ProductsDashboard } from './features/products/ProductsDashboard';
+import { IOrder } from './app/modules/order';
+import agent from './app/api/agent';
+import ProductStore from './app/stores/productStore';
+import {observer} from 'mobx-react-lite';
+import { Route } from 'react-router-dom';
+import HomePage from './features/home/HomePage';
 
 const App = () => {
-  const[productCategories,setProductCategories] = useState<IProductCategory[]>([])
-  const[products,setProducts] = useState<IProduct[]>([])
-
-  var categories_url = "http://localhost:9000/api/productcategories"
-  var products_url = "http://localhost:9000/api/products"
+  const productStore = useContext(ProductStore);
+  const {
+  customers,loadCustomers
+  } = productStore;
 
   useEffect(() => {
-      // axios.get<IProductCategory[]>(url,{method: 'get', headers: {
-      //   'Access-Control-Allow-Origin':'http://localhost:3000',
-      //   },
-      //  })
-      // .then((response) => {
-      //   console.log('Starting Request', response)
-      //   setProductCategories(response.data)
-      //   });
-      axios.get<IProduct[]>(products_url,{method: 'get', headers: {
-        'Access-Control-Allow-Origin':'http://localhost:3000',
-        },
-       })
-      .then((response) => {
-        console.log('Starting Request', response)
-        setProducts(response.data)
-        });
+    loadCustomers();
+    },[loadCustomers]);
 
-    },[]);
-  
   return (
     <Fragment>
-    {/* <NavBar openCreateForm={handleOpenCreateForm} /> */}
+    <NavBar customers={customers} />
     <Container style={{marginTop: '7em'}}>
-      {/* <ProductCategoryList productCategories={productCategories} /> */}
-      <ProductList products={products} />
+      <Route exact path='/' component={HomePage} />
+      <Route component={ProductsDashboard} exact path='/products' />
+      {/* <ProductsDashboard  /> */}
     </Container>
   </Fragment>
   );
 }
 
-export default App;
+export default observer(App);

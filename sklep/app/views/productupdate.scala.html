@@ -1,4 +1,4 @@
-@(product: Form[UpdateProductForm],category: Seq[ProductCategory])(implicit request: MessagesRequestHeader, flash: Flash)
+@(product: Form[UpdateProductForm],category: Seq[ProductCategory],brands: Seq[Brand])(implicit request: MessagesRequestHeader, flash: Flash)
 
 @import helper._
 
@@ -9,6 +9,8 @@
     <input name="id" id="id" value="@product("id").value" type="hidden" />
     @inputText(product("name"))
     @inputText(product("description"))
+    @inputText(product("price"))
+    @inputText(product("img"))
 
     <select name="categoryId" id="categoryId">
     @for(cat <- category){
@@ -21,7 +23,19 @@
     }
     </select>
 
+    <select name="brandId" id="brandId">
+    @for(bra <- brands){
+        @if(bra.id.toString == product("brandId").value.getOrElse((0))) {
+            <option value="@bra.id" selected>@bra.name</option>
+        } else {
+            <option value="@bra.id">@bra.name</option>
+        }
+    }
+    </select>
+
+
     <div class="buttons">
         <input type="submit" value="Update Product"/>
     </div>
 }
+<a href="@controllers.routes.ProductController.deleteProduct(product("id").value.get.toInt)">Delete</a>
