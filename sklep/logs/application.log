@@ -1,5 +1,5 @@
-2020-04-29 21:10:09,745 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-9 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
-2020-04-29 21:10:11,314 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-9 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2020-05-08 19:59:19,497 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-6 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
+2020-05-08 19:59:20,997 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-6 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
@@ -8,9 +8,9 @@
     filters.ExampleFilter
     play.filters.cors.CORSFilter
 
-2020-04-29 21:10:11,324 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-9 - Application started (Dev) (no global state)
-2020-04-29 21:11:39,593 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-14 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
-2020-04-29 21:11:39,817 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-14 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2020-05-08 19:59:21,007 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-6 - Application started (Dev) (no global state)
+2020-05-08 22:20:01,455 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-11 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
+2020-05-08 22:20:01,786 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-11 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
@@ -19,9 +19,9 @@
     filters.ExampleFilter
     play.filters.cors.CORSFilter
 
-2020-04-29 21:11:39,822 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-14 - Application started (Dev) (no global state)
-2020-04-29 21:14:39,026 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-7 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
-2020-04-29 21:14:39,180 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-7 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2020-05-08 22:20:01,792 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-11 - Application started (Dev) (no global state)
+2020-05-08 22:20:42,667 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-11 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
+2020-05-08 22:20:43,030 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-11 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
@@ -30,9 +30,9 @@
     filters.ExampleFilter
     play.filters.cors.CORSFilter
 
-2020-04-29 21:14:39,183 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-7 - Application started (Dev) (no global state)
-2020-04-29 21:15:44,761 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-12 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
-2020-04-29 21:15:44,866 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-12 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2020-05-08 22:20:43,040 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-11 - Application started (Dev) (no global state)
+2020-05-08 22:20:52,639 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-10 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
+2020-05-08 22:20:52,757 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-10 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
@@ -41,9 +41,9 @@
     filters.ExampleFilter
     play.filters.cors.CORSFilter
 
-2020-04-29 21:15:44,870 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-12 - Application started (Dev) (no global state)
-2020-04-29 21:17:48,227 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-13 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
-2020-04-29 21:17:48,411 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-13 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2020-05-08 22:20:52,761 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-10 - Application started (Dev) (no global state)
+2020-05-08 22:21:31,645 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-9 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
+2020-05-08 22:21:31,821 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-9 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
@@ -52,57 +52,9 @@
     filters.ExampleFilter
     play.filters.cors.CORSFilter
 
-2020-04-29 21:17:48,413 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-13 - Application started (Dev) (no global state)
-2020-04-29 21:35:49,232 [ERROR] from play.api.http.DefaultHttpErrorHandler in play-dev-mode-akka.actor.default-dispatcher-24 - 
-
-! @7fj4bm8h8 - Internal server error, for (GET) [/addproduct] ->
- 
-play.sbt.PlayExceptions$CompilationException: Compilation error[Don't call `Awaitable` methods directly, use the `Await` object.]
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:32)
-	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:32)
-	at scala.Option.map(Option.scala:145)
-	at play.sbt.run.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:39)
-	at play.sbt.run.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:34)
-	at scala.Option.map(Option.scala:145)
-	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:34)
-	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:27)
-	at play.sbt.run.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:62)
-	at play.sbt.run.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:62)
-	at scala.util.Either$LeftProjection.map(Either.scala:377)
-	at play.sbt.run.PlayReload$.compile(PlayReload.scala:62)
-	at play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$3.apply(PlayRun.scala:75)
-	at play.sbt.run.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$3.apply(PlayRun.scala:74)
-	at play.runsupport.Reloader$$anonfun$reload$1.apply(Reloader.scala:496)
-	at play.runsupport.Reloader$$anon$5.run(Reloader.scala:57)
-	at java.base/java.security.AccessController.doPrivileged(Native Method)
-	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:52)
-	at play.runsupport.Reloader.reload(Reloader.scala:494)
-	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:141)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:300)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:190)
-	at akka.stream.impl.fusing.MapAsync$$anon$30.onPush(Ops.scala:1289)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:541)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:423)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:624)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:501)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:599)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:768)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:783)
-	at akka.actor.Actor.aroundReceive(Actor.scala:534)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:532)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:690)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:573)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:543)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:269)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:230)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:242)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
-2020-04-29 21:37:40,651 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-26 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
-2020-04-29 21:37:40,768 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-26 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2020-05-08 22:21:31,826 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-9 - Application started (Dev) (no global state)
+2020-05-08 22:23:54,972 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-13 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
+2020-05-08 22:23:55,107 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-13 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
@@ -111,9 +63,9 @@ play.sbt.PlayExceptions$CompilationException: Compilation error[Don't call `Awai
     filters.ExampleFilter
     play.filters.cors.CORSFilter
 
-2020-04-29 21:37:40,770 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-26 - Application started (Dev) (no global state)
-2020-04-29 21:46:02,664 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-29 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
-2020-04-29 21:46:02,748 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-29 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2020-05-08 22:23:55,111 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-13 - Application started (Dev) (no global state)
+2020-05-08 22:24:13,400 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-9 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
+2020-05-08 22:24:13,968 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-9 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
@@ -122,9 +74,9 @@ play.sbt.PlayExceptions$CompilationException: Compilation error[Don't call `Awai
     filters.ExampleFilter
     play.filters.cors.CORSFilter
 
-2020-04-29 21:46:02,751 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-29 - Application started (Dev) (no global state)
-2020-04-29 21:53:16,474 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-38 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
-2020-04-29 21:53:16,575 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-38 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2020-05-08 22:24:13,971 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-9 - Application started (Dev) (no global state)
+2020-05-08 22:24:30,246 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-9 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
+2020-05-08 22:24:30,352 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-9 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
@@ -133,4 +85,48 @@ play.sbt.PlayExceptions$CompilationException: Compilation error[Don't call `Awai
     filters.ExampleFilter
     play.filters.cors.CORSFilter
 
-2020-04-29 21:53:16,580 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-38 - Application started (Dev) (no global state)
+2020-05-08 22:24:30,355 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-9 - Application started (Dev) (no global state)
+2020-05-08 22:24:45,717 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-9 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
+2020-05-08 22:24:46,192 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-9 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    filters.ExampleFilter
+    filters.ExampleFilter
+    play.filters.cors.CORSFilter
+
+2020-05-08 22:24:46,195 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-9 - Application started (Dev) (no global state)
+2020-05-08 22:25:03,954 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-8 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
+2020-05-08 22:25:04,349 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-8 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    filters.ExampleFilter
+    filters.ExampleFilter
+    play.filters.cors.CORSFilter
+
+2020-05-08 22:25:04,351 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-8 - Application started (Dev) (no global state)
+2020-05-08 22:25:45,262 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-13 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
+2020-05-08 22:25:45,377 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-13 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    filters.ExampleFilter
+    filters.ExampleFilter
+    play.filters.cors.CORSFilter
+
+2020-05-08 22:25:45,379 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-13 - Application started (Dev) (no global state)
+2020-05-08 22:27:48,868 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-6 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
+2020-05-08 22:27:49,006 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-6 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    filters.ExampleFilter
+    filters.ExampleFilter
+    play.filters.cors.CORSFilter
+
+2020-05-08 22:27:49,015 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-6 - Application started (Dev) (no global state)

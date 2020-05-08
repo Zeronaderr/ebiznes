@@ -7,7 +7,7 @@ import slick.jdbc.JdbcProfile
 import scala.concurrent.{ExecutionContext, Future}
 
 @Singleton
-class PaymentRepository @Inject() (dbConfigProvider: DatabaseConfigProvider)(implicit ec: ExecutionContext) {
+class PaymentRepository @Inject() (dbConfigProvider: DatabaseConfigProvider,orderRepository: OrderRepository)(implicit ec: ExecutionContext) {
   val dbConfig = dbConfigProvider.get[JdbcProfile]
 
   import dbConfig._
@@ -16,16 +16,18 @@ class PaymentRepository @Inject() (dbConfigProvider: DatabaseConfigProvider)(imp
   class PaymentTable(tag: Tag) extends Table[Payment](tag, "Payment") {
     def id = column[Int]("id", O.PrimaryKey, O.AutoInc)
     def orderId = column[Int]("orderId")
+//    def order_fk = foreignKey("order_fk",orderId,ord)(_.id)
     def * = (id, orderId) <> ((Payment.apply _).tupled, Payment.unapply)
   }
-
-  val paymentRepo = TableQuery[PaymentTable]
+  import orderRepository.OrderTable
+  private val ord = TableQuery[OrderTable]
+  private val paymentRepo = TableQuery[PaymentTable]
 
   def create(orderId: Int): Future[Payment] = db.run {
-    (paymentRepo.map(c => (c.orderId))
+    (paymentRepo.map(c => c.orderId)
       returning paymentRepo.map(_.id)
       into ((orderId, id) => Payment(id, orderId))
-      ) += (orderId)
+      ) += orderId
   }
 
   def getByIdAsync(id: Int): Future[Option[Payment]] = db.run{

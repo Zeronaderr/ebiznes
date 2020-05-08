@@ -7,7 +7,7 @@ import slick.jdbc.JdbcProfile
 import scala.concurrent.{ExecutionContext, Future}
 
 @Singleton
-class EmployeeRepository @Inject() (dbConfigProvider: DatabaseConfigProvider)(implicit ec: ExecutionContext) {
+class EmployeeRepository @Inject() (dbConfigProvider: DatabaseConfigProvider,addressRepository: AddressRepository)(implicit ec: ExecutionContext) {
   val dbConfig = dbConfigProvider.get[JdbcProfile]
 
   import dbConfig._
@@ -18,9 +18,12 @@ class EmployeeRepository @Inject() (dbConfigProvider: DatabaseConfigProvider)(im
     def firstName = column[String]("firstName")
     def lastName = column[String]("lastName")
     def addressId = column[Int]("addressId")
+//    def address_fk = foreignKey("address_fk",addressId,adr)(_.id)
     def * = (id, firstName,lastName,addressId) <> ((Employee.apply _).tupled, Employee.unapply)
   }
 
+  import addressRepository.AddressTable
+  private val adr = TableQuery[AddressTable]
   val employeeRepo = TableQuery[EmployeeTable]
 
   def create(firstName: String,lastName: String,addressId: Int): Future[Employee] = db.run {

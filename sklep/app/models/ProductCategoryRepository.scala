@@ -4,10 +4,7 @@ import javax.inject.{Inject, Singleton}
 import play.api.db.slick.DatabaseConfigProvider
 import slick.jdbc.JdbcProfile
 
-import scala.concurrent.Await._
-import scala.concurrent.duration.Duration
-import scala.concurrent.{Await, ExecutionContext, Future}
-import scala.util.Try
+import scala.concurrent.{ ExecutionContext, Future}
 
 @Singleton
 class ProductCategoryRepository @Inject() (dbConfigProvider: DatabaseConfigProvider)(implicit ec: ExecutionContext) {
@@ -22,13 +19,13 @@ class ProductCategoryRepository @Inject() (dbConfigProvider: DatabaseConfigProvi
     def * = (id, name) <> ((ProductCategory.apply _).tupled, ProductCategory.unapply)
   }
 
-  val category = TableQuery[ProductCategoryTable]
+  private val category = TableQuery[ProductCategoryTable]
 
   def create(name: String): Future[ProductCategory] = db.run {
-    (category.map(c => (c.name))
+    (category.map(c => c.name)
       returning category.map(_.id)
       into ((name, id) => ProductCategory(id, name))
-      ) += (name)
+      ) += name
   }
 
   def getByIdAsync(id: Int): Future[Option[ProductCategory]] = db.run{

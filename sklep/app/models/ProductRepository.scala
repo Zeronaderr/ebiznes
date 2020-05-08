@@ -8,13 +8,13 @@ import scala.concurrent.{ExecutionContext, Future}
 
 @Singleton
 class ProductRepository @Inject() (dbConfigProvider: DatabaseConfigProvider, categoryRepository: ProductCategoryRepository, brandRepository: BrandRepository)(implicit ec: ExecutionContext) {
-  private val dbConfig = dbConfigProvider.get[JdbcProfile]
+  val dbConfig = dbConfigProvider.get[JdbcProfile]
 
   import dbConfig._
   import profile.api._
 
 
-  private class ProductTable(tag: Tag) extends Table[Product](tag, "product") {
+  class ProductTable(tag: Tag) extends Table[Product](tag, "product") {
 
     /** The ID column, which is the primary key, and auto incremented */
     def id = column[Long]("id", O.PrimaryKey, O.AutoInc)
@@ -33,7 +33,10 @@ class ProductRepository @Inject() (dbConfigProvider: DatabaseConfigProvider, cat
 
     def brandId = column[Int]("brandId")
 
-    def category_fk = foreignKey("cat_fk",categoryId, cat)(_.id)
+//    def category_fk = foreignKey("cat_fk",categoryId, cat)(_.id)
+
+
+//    def brand_fk = foreignKey("brand_fk",brandId, brands)(_.id, onDelete = ForeignKeyAction.Cascade)
 
     /**
      * This is the tables default "projection".

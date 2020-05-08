@@ -19,7 +19,7 @@ class AddressRepository @Inject() (dbConfigProvider: DatabaseConfigProvider)(imp
     def * = (id, address) <> ((Address.apply _).tupled, Address.unapply)
   }
 
-  val addressRepo = TableQuery[AddressTable]
+  private val addressRepo = TableQuery[AddressTable]
 
   def getByIdAsync(id: Int): Future[Option[Address]] = db.run{
     addressRepo.filter(_.id === id).result.headOption
@@ -35,10 +35,10 @@ class AddressRepository @Inject() (dbConfigProvider: DatabaseConfigProvider)(imp
   }
 
   def create(address: String): Future[Address] = db.run {
-    (addressRepo.map(c => (c.address))
+    (addressRepo.map(c => c.address)
       returning addressRepo.map(_.id)
       into ((address, id) => Address(id, address))
-      ) += (address)
+      ) += address
   }
 
   def delete(id: Int): Future[Unit] = db.run(addressRepo.filter(_.id === id).delete).map(_ => ())
