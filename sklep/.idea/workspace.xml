@@ -20,21 +20,71 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="721a1fe9-7f22-40e0-a7de-e2f2bd8cf234" name="Default Changelist" comment="couple of changes and enabling cors">
-      <change afterPath="$PROJECT_DIR$/conf/evolutions/default/10.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conf/evolutions/default/9.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/SignInController.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/SignUpController.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/SocialAuthController.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/PasswordInfoDTO.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/PasswordInfoRepository.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/SignUp.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/User.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/UserDTO.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/UserRepository.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/UserToken.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/UserTokenRepository.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/utils/DefaultEnv.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/product/products.scala.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_typesafe_play_play_ws_2_12_2_8_1_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_typesafe_play_play_ws_standalone_json_2_12_2_1_2_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_typesafe_play_play_ws_standalone_xml_2_12_2_1_2_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/sklep-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/sklep-build.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/sklep.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/sklep.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sbt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/OrderController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/OrderController.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/PaymentController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/PaymentController.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/AddressRepository.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/AddressRepository.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Module.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/Module.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/AddressController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/AddressController.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/AsyncController.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/BrandController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/BrandController.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/CountController.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/CustomerController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/CustomerController.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/DiscountController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/DiscountController.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/EmployeeController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/EmployeeController.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/ProductCategoryController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/ProductCategoryController.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/ProductController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/ProductController.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/ShipperController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/ShipperController.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Customer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Customer.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/CustomerRepository.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/CustomerRepository.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/EmployeeRepository.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/EmployeeRepository.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Order.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Order.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/OrderRepository.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/OrderRepository.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/PaymentRepository.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/PaymentRepository.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/ProductCategoryRepository.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/ProductCategoryRepository.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/ProductRepository.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/ProductRepository.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/ApplicationTimer.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/Counter.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/addressadd.scala.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/address/addressadd.scala.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/addressupdate.scala.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/address/addressupdate.scala.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/brandadd.scala.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/brand/brandadd.scala.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/brandupdate.scala.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/brand/brandupdate.scala.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/customeradd.scala.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/customer/customeradd.scala.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/customerupdate.scala.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/customer/customerupdate.scala.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/discountadd.scala.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/discount/discountadd.scala.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/discountupdate.scala.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/discount/discountupdate.scala.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/employeeadd.scala.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/employee/employeeadd.scala.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/employeeupdate.scala.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/employee/employeeupdate.scala.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/product.scala.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/product/product.scala.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/productCategory.scala.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/productCategory/productCategory.scala.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/productCategoryAdd.scala.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/productCategory/productCategoryAdd.scala.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/productCategoryUpdate.scala.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/productCategory/productCategoryUpdate.scala.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/productadd.scala.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/product/productadd.scala.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/productcategories.scala.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/productCategory/productcategories.scala.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/products.scala.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/productupdate.scala.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/product/productupdate.scala.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/shipperUpdate.scala.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shipper/shipperUpdate.scala.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/shipperadd.scala.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shipper/shipperadd.scala.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/welcome.scala.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/welcome.scala.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conf/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/conf/application.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/routes" beforeDir="false" afterPath="$PROJECT_DIR$/conf/routes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/application.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/application.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/build.properties" beforeDir="false" afterPath="$PROJECT_DIR$/project/build.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/project/target/config-classes/$07806b279ba84f5b6b80$$anonfun$$sbtdef$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project/project/target/config-classes/$07806b279ba84f5b6b80$.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/project/project/target/config-classes/$07806b279ba84f5b6b80.cache" beforeDir="false" />
@@ -105,141 +155,210 @@
       <change beforePath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/runtime/managedClasspath/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sklepapp/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/sklepapp/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sklepapp/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sklepapp/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sklepapp/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sklepapp/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/application.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/AddressController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/AddressController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/BrandController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/BrandController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/CustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/DiscountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/DiscountController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/EmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/OrderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/PaymentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/PaymentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ProductCategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ProductCategoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseAddressController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseAddressController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseAssets.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseAssets.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseAsyncController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseAsyncController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseBrandController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseBrandController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseCountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseCountController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseCustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseCustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseDiscountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseDiscountController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseEmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseEmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseHomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseHomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseOrderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReversePaymentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReversePaymentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseProductCategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseProductCategoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseShipperController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseShipperController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ShipperController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ShipperController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseAddressController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseAddressController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseAssets.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseAssets.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseAsyncController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseAsyncController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseBrandController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseBrandController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseCountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseCountController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseCustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseCustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseDiscountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseDiscountController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseEmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseEmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseHomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseHomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseOrderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReversePaymentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReversePaymentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseProductCategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseProductCategoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseShipperController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseShipperController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/models/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/models/Address.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/models/Brand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/models/Brand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/models/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/models/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/models/Discount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/models/Discount.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/models/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/models/Employee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/models/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/models/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/models/Payment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/models/Payment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/models/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/models/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/models/ProductCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/models/ProductCategory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/models/Shipper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/models/Shipper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/router/Routes$$anonfun$routes$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/router/Routes$$anonfun$routes$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/router/Routes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/router/Routes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/routes" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/routes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-compile-internal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-compile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-debian.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-debian.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-docker.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-docker.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-docs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-docs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-linux.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-linux.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-optional.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-provided.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-provided.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-rpm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-rpm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-runtime-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-runtime-internal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-runtime.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-scala-tool.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-sources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-sources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-test-internal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-universal-docs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-universal-docs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-universal-src.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-universal-src.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-universal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-universal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-web-assets-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-web-assets-test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-web-assets.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-web-assets.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-web-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-web-plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-windows.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-windows.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-compile-internal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-compile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-compile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-debian.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-debian.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-docker.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-docker.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-docs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-docs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-linux.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-linux.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-optional.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-optional.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-provided.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-provided.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-rpm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-rpm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-runtime-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-runtime-internal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-runtime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-runtime.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-scala-tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-scala-tool.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-sources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-sources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-test-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-test-internal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-universal-docs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-universal-docs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-universal-src.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-universal-src.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-universal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-universal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-web-assets-test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-web-assets-test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-web-assets.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-web-assets.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-web-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-web-plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-windows.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-windows.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/sklep/sklep$sources_2.12/1.0/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/sklep/sklep$sources_2.12/1.0/resolved.xml.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/sklep/sklep$sources_2.12/1.0/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/sklep/sklep$sources_2.12/1.0/resolved.xml.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/sklep/sklep_2.12/1.0/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/sklep/sklep_2.12/1.0/resolved.xml.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/sklep/sklep_2.12/1.0/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/sklep/sklep_2.12/1.0/resolved.xml.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/$global/$global/streams/sync-exported-assets-web-assets" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/$global/$global/streams/sync-exported-assets-web-assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructure/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructure/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/input_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/input_dsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/playCommonClassloader/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/playCommonClassloader/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/copy-resources" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/copy-resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/dependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/dependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/exportedProducts/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/playRoutes/$global/streams/op-cache" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/playRoutes/$global/streams/op-cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/twirlCompileTemplates/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/twirlCompileTemplates/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/runtime/exportedProducts/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/exportedProducts/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/runtime/internalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/web-assets/assets/$global/streams/sync-assets-web-assets" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/web-assets/assets/$global/streams/sync-assets-web-assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sklepapp/src/features/products/forms/AddProductForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sklepapp/src/features/products/forms/AddProductForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sklepapp/src/features/products/list/ProductList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sklepapp/src/features/products/list/ProductList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/.history" beforeDir="false" afterPath="$PROJECT_DIR$/conf/evolutions/default/11.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Module.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/application.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/AddressController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/AsyncController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/BrandController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/CountController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/CustomerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/DiscountController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/EmployeeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/HomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/OrderController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/PaymentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ProductCategoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseAddressController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseAssets.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseAsyncController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseBrandController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseCountController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseCustomerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseDiscountController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseEmployeeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseHomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseOrderController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReversePaymentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseProductCategoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ReverseShipperController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/ShipperController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseAddressController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseAssets.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseAsyncController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseBrandController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseCountController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseCustomerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseDiscountController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseEmployeeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseHomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseOrderController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReversePaymentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseProductCategoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/javascript/ReverseShipperController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/routes$javascript.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/routes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/filters/ExampleFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/images/external.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/images/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/images/header-pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/javascripts/hello.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/logback.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/models/Address.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/models/Brand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/models/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/models/Discount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/models/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/models/Order.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/models/Payment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/models/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/models/ProductCategory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/models/Shipper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/router/Routes$$anonfun$routes$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/router/Routes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/router/RoutesPrefix$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/router/RoutesPrefix.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/routes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/services/ApplicationTimer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/services/AtomicCounter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/services/Counter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/stylesheets/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/views/html/index$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/views/html/index.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/views/html/main$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/views/html/main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/views/html/welcome$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/views/html/welcome.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/views/index.scala.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/views/main.scala.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/views/welcome.scala.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/org.scala-sbt.temp/temp-module-750703454be73072ce64f1c215ff85550284ae5b/0.13.17/resolved.xml.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/org.scala-sbt.temp/temp-module-750703454be73072ce64f1c215ff85550284ae5b/0.13.17/resolved.xml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ivy-report.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/ivy-report.xsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/org.scala-sbt.temp-temp-module-750703454be73072ce64f1c215ff85550284ae5b-component.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-compile-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-compile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-debian.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-docker.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-docs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-linux.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-optional.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-provided.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-rpm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-runtime-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-scala-tool.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-sources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-test-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-test.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-universal-docs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-universal-src.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-universal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-web-assets-test.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-web-assets.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-web-plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep$sources_2.12-windows.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-compile-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-compile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-debian.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-docker.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-docs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-linux.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-optional.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-provided.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-rpm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-runtime-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-scala-tool.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-sources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-test-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-test.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-universal-docs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-universal-src.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-universal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-web-assets-test.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-web-assets.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-web-plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/sklep-sklep_2.12-windows.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/sklep/sklep$sources_2.12/1.0/resolved.xml.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/sklep/sklep$sources_2.12/1.0/resolved.xml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/sklep/sklep_2.12/1.0/resolved.xml.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/sklep/sklep_2.12/1.0/resolved.xml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/routes/main/controllers/ReverseRoutes.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/routes/main/controllers/routes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/routes/main/router/Routes.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/routes/main/router/RoutesPrefix.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/html/index.template.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/html/main.template.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/html/welcome.template.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/$global/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/$global/$global/streams/sync-exported-assets-web-assets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructure/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/input_dsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/ivySbt/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/conf/silhouette.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/playCommonClassloader/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/playCompileEverything/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/projectDescriptors/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/updateSbtClassifiers/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/$global/$global/discoveredMainClasses/data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/compile/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/copy-resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/dependencyClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/exportedProducts/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/internalDependencyClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/playRoutes/$global/streams/op-cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/twirlCompileTemplates/$global/streams/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/unmanagedClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/unmanagedJars/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/runtime/exportedProducts/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/runtime/internalDependencyClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/runtime/unmanagedClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/runtime/unmanagedJars/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/unmanagedClasspath/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/unmanagedJars/$global/streams/export" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/web-assets/assets/$global/streams/sync-assets-web-assets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web/classes/main/META-INF/resources/webjars/sklep/1.0/images/external.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web/classes/main/META-INF/resources/webjars/sklep/1.0/images/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web/classes/main/META-INF/resources/webjars/sklep/1.0/images/header-pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web/classes/main/META-INF/resources/webjars/sklep/1.0/javascripts/hello.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web/classes/main/META-INF/resources/webjars/sklep/1.0/stylesheets/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web/public/main/images/external.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web/public/main/images/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web/public/main/images/header-pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web/public/main/javascripts/hello.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/web/public/main/stylesheets/main.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,6 +372,25 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="SBT">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Scala Trait" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -293,15 +431,16 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="sbt.project.settings.configurable" />
     <property name="ts.external.directory.path" value="D:\ebiznes\sklep\sklepapp\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\ebiznes\sklep\app\views" />
-      <recent name="D:\ebiznes\sklep\app\views\productcategory" />
+      <recent name="D:\ebiznes\sklep\app\views\shipper" />
+      <recent name="D:\ebiznes\sklep\app\views\productCategory" />
       <recent name="D:\ebiznes\sklep\app\views\product" />
-      <recent name="D:\ebiznes\sklep\conf\evolutions\default" />
+      <recent name="D:\ebiznes\sklep\app\views\employee" />
+      <recent name="D:\ebiznes\sklep\app\views\discount" />
     </key>
   </component>
   <component name="RunManager">
@@ -359,7 +498,18 @@
       <workItem from="1588402480000" duration="3936000" />
       <workItem from="1588531671980" duration="1104000" />
       <workItem from="1588885686342" duration="1340000" />
-      <workItem from="1588959302431" duration="4698000" />
+      <workItem from="1588959302431" duration="14534000" />
+      <workItem from="1589488898148" duration="1809000" />
+      <workItem from="1590008571156" duration="99000" />
+      <workItem from="1590087804453" duration="3555000" />
+      <workItem from="1590174866673" duration="2263000" />
+      <workItem from="1590177234339" duration="1115000" />
+      <workItem from="1590178425521" duration="2350000" />
+      <workItem from="1590180880014" duration="7725000" />
+      <workItem from="1590227499525" duration="37866000" />
+      <workItem from="1590308417491" duration="4296000" />
+      <workItem from="1590482984484" duration="4578000" />
+      <workItem from="1590559955000" duration="7936000" />
     </task>
     <task id="LOCAL-00001" summary="zadanie 3, 4, niekompletne 5, zaczete 6, 7">
       <created>1587924037027</created>
@@ -375,7 +525,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588239362252</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="couple of changes and enabling cors">
+      <created>1588969701221</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1588969701221</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,7 +554,8 @@
     <MESSAGE value="zadanie 3, 4, niekompletne 5, zaczete 6, 7" />
     <MESSAGE value="zadanie 4? głownie react + zmiany w modelu bazy i dodanie formatek do deletu" />
     <MESSAGE value="couple of changes and enabling cors" />
-    <option name="LAST_COMMIT_MESSAGE" value="couple of changes and enabling cors" />
+    <MESSAGE value="working facebook &amp; google authentication, some other changes to front." />
+    <option name="LAST_COMMIT_MESSAGE" value="working facebook &amp; google authentication, some other changes to front." />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Intentions" timestamp="1587673894907">
@@ -408,87 +566,111 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="700" y="388" key="#Project_Settings/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587917567652" />
-    <state x="690" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1587902516645">
+    <state x="690" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1590245243603">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="690" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1590245243603" />
     <state x="690" y="275" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587902516645" />
     <state x="387" y="60" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587901606983">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="387" y="60" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587901606983" />
     <state x="2205" y="45" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1366.728/0.0.1920.1040@1920.0.1366.728" timestamp="1587827433869" />
-    <state x="609" y="266" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587896072205">
+    <state x="609" y="266" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588973784845">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="609" y="266" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1588973784845" />
     <state x="609" y="266" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587896072205" />
     <state x="2353" y="186" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1366.728/0.0.1920.1040@1920.0.1366.728" timestamp="1587817750209" />
-    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser" timestamp="1587898163749">
+    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser" timestamp="1590257095986">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1590257095986" />
     <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587898163749" />
     <state x="743" y="389" width="433" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1588338060025">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="389" width="433" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1588338060025" />
-    <state x="2446" y="181" key="FileChooserDialogImpl" timestamp="1587827428263">
-      <screen x="1920" y="0" width="1366" height="728" />
-    </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587662742224" />
-    <state x="2446" y="181" key="FileChooserDialogImpl/1920.0.1366.728/0.0.1920.1040@1920.0.1366.728" timestamp="1587827428263" />
-    <state width="1877" height="260" key="GridCell.Tab.0.bottom" timestamp="1588969112854">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590258307378">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1590258307378" />
+    <state width="474" height="466" key="DebuggerActiveHint" timestamp="1590361417013">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="474" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1590361417013" />
+    <state x="739" y="259" key="FileChooserDialogImpl" timestamp="1590179992518">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="739" y="259" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1590179992518" />
+    <state x="740" y="275" key="FileChooserDialogImpl/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587662742224" />
+    <state x="2446" y="181" key="FileChooserDialogImpl/1920.0.1366.728/0.0.1920.1040@1920.0.1366.728" timestamp="1587827428263" />
+    <state width="1414" height="267" key="GridCell.Tab.0.bottom" timestamp="1590569465040">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1414" height="267" key="GridCell.Tab.0.bottom/0.0.1366.728/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1590569465040" />
     <state width="1877" height="273" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1920.1080@1366.0.1920.1080" timestamp="1588538436128" />
-    <state width="1877" height="260" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1588969112854" />
+    <state width="1560" height="265" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1590498427524" />
+    <state width="1323" height="149" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1366.768@1920.0.1366.768" timestamp="1590174784151" />
     <state width="1877" height="170" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587924156156" />
     <state width="1877" height="170" key="GridCell.Tab.0.bottom/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587923488077" />
     <state width="1323" height="176" key="GridCell.Tab.0.bottom/1920.0.1366.728/0.0.1920.1040@1920.0.1366.728" timestamp="1587831592913" />
-    <state width="1877" height="260" key="GridCell.Tab.0.center" timestamp="1588969112854">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1414" height="267" key="GridCell.Tab.0.center" timestamp="1590569465040">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
+    <state width="1414" height="267" key="GridCell.Tab.0.center/0.0.1366.728/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1590569465040" />
     <state width="1877" height="273" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1920.1080@1366.0.1920.1080" timestamp="1588538436128" />
-    <state width="1877" height="260" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1588969112854" />
+    <state width="1560" height="265" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1590498427524" />
+    <state width="1323" height="149" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1366.768@1920.0.1366.768" timestamp="1590174784151" />
     <state width="1877" height="170" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587924156156" />
     <state width="1877" height="170" key="GridCell.Tab.0.center/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587923488076" />
     <state width="1323" height="176" key="GridCell.Tab.0.center/1920.0.1366.728/0.0.1920.1040@1920.0.1366.728" timestamp="1587831592911" />
-    <state width="1877" height="260" key="GridCell.Tab.0.left" timestamp="1588969112853">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1414" height="267" key="GridCell.Tab.0.left" timestamp="1590569465040">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
+    <state width="1414" height="267" key="GridCell.Tab.0.left/0.0.1366.728/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1590569465040" />
     <state width="1877" height="273" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1920.1080@1366.0.1920.1080" timestamp="1588538436128" />
-    <state width="1877" height="260" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1588969112853" />
+    <state width="1560" height="265" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1590498427524" />
+    <state width="1323" height="149" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1366.768@1920.0.1366.768" timestamp="1590174784150" />
     <state width="1877" height="170" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587924156156" />
     <state width="1877" height="170" key="GridCell.Tab.0.left/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587923488076" />
     <state width="1323" height="176" key="GridCell.Tab.0.left/1920.0.1366.728/0.0.1920.1040@1920.0.1366.728" timestamp="1587831592911" />
-    <state width="1877" height="260" key="GridCell.Tab.0.right" timestamp="1588969112854">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1414" height="267" key="GridCell.Tab.0.right" timestamp="1590569465040">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
+    <state width="1414" height="267" key="GridCell.Tab.0.right/0.0.1366.728/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1590569465040" />
     <state width="1877" height="273" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1920.1080@1366.0.1920.1080" timestamp="1588538436128" />
-    <state width="1877" height="260" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1588969112854" />
+    <state width="1560" height="265" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1590498427524" />
+    <state width="1323" height="149" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1366.768@1920.0.1366.768" timestamp="1590174784151" />
     <state width="1877" height="170" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587924156156" />
     <state width="1877" height="170" key="GridCell.Tab.0.right/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587923488076" />
     <state width="1323" height="176" key="GridCell.Tab.0.right/1920.0.1366.728/0.0.1920.1040@1920.0.1366.728" timestamp="1587831592912" />
-    <state width="1877" height="353" key="GridCell.Tab.1.bottom" timestamp="1588324900327">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1414" height="267" key="GridCell.Tab.1.bottom" timestamp="1590569465041">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="353" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1588324900327" />
+    <state width="1414" height="267" key="GridCell.Tab.1.bottom/0.0.1366.728/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1590569465040" />
+    <state width="1417" height="255" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1590362926441" />
     <state width="1877" height="170" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587924156157" />
     <state width="1877" height="170" key="GridCell.Tab.1.bottom/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587923488077" />
-    <state width="1877" height="353" key="GridCell.Tab.1.center" timestamp="1588324900327">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1414" height="267" key="GridCell.Tab.1.center" timestamp="1590569465040">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="353" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1588324900327" />
+    <state width="1414" height="267" key="GridCell.Tab.1.center/0.0.1366.728/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1590569465040" />
+    <state width="1417" height="255" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1590362926440" />
     <state width="1877" height="170" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587924156157" />
     <state width="1877" height="170" key="GridCell.Tab.1.center/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587923488077" />
-    <state width="1877" height="353" key="GridCell.Tab.1.left" timestamp="1588324900327">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1414" height="267" key="GridCell.Tab.1.left" timestamp="1590569465040">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="353" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1588324900327" />
+    <state width="1414" height="267" key="GridCell.Tab.1.left/0.0.1366.728/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1590569465040" />
+    <state width="1417" height="255" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1590362926440" />
     <state width="1877" height="170" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587924156157" />
     <state width="1877" height="170" key="GridCell.Tab.1.left/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587923488077" />
-    <state width="1877" height="353" key="GridCell.Tab.1.right" timestamp="1588324900327">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1414" height="267" key="GridCell.Tab.1.right" timestamp="1590569465040">
+      <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="353" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1588324900327" />
+    <state width="1414" height="267" key="GridCell.Tab.1.right/0.0.1366.728/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1590569465040" />
+    <state width="1417" height="255" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1590362926440" />
     <state width="1877" height="170" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587924156157" />
     <state width="1877" height="170" key="GridCell.Tab.1.right/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587923488077" />
     <state width="276" height="653" key="HiddenNamespacesPopup" timestamp="1588183127162">
@@ -496,15 +678,25 @@
     </state>
     <state width="276" height="653" key="HiddenNamespacesPopup/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1588183127162" />
     <state width="196" height="457" key="HiddenNamespacesPopup/1920.0.1366.728/0.0.1920.1040@1920.0.1366.728" timestamp="1587821168361" />
-    <state x="229" y="0" key="SettingsEditor" timestamp="1587836656559">
+    <state x="229" y="0" key="SettingsEditor" timestamp="1590181355787">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="229" y="0" key="SettingsEditor/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1590181355787" />
     <state x="229" y="0" key="SettingsEditor/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587836656559" />
     <state x="2083" y="0" key="SettingsEditor/1920.0.1366.728/0.0.1920.1040@1920.0.1366.728" timestamp="1587301606166" />
+    <state width="968" height="549" key="XDebugger.FullValuePopup" timestamp="1590567519548">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="968" height="549" key="XDebugger.FullValuePopup/0.0.1366.728/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1590567519548" />
+    <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1590267657719" />
     <state x="846" y="407" width="316" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1587900858229">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="846" y="407" width="316" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587900858229" />
+    <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590270036648">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1590270036648" />
     <state x="1920" y="0" width="1229" height="855" maximized="true" key="dock-window-1" timestamp="1588321340498">
       <screen x="1920" y="0" width="1366" height="768" />
     </state>
@@ -514,10 +706,11 @@
       <screen x="1920" y="0" width="1366" height="728" />
     </state>
     <state x="1950" y="-12" width="1382" height="738" maximized="true" key="dock-window-2/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587899117147" />
-    <state x="313" y="187" width="1231" height="668" key="find.popup" timestamp="1588334497241">
+    <state x="313" y="187" width="1231" height="668" key="find.popup" timestamp="1590266599678">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="313" y="187" width="1231" height="668" key="find.popup/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1588334497241" />
+    <state x="313" y="187" width="1231" height="668" key="find.popup/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1590266599678" />
+    <state x="2143" y="138" width="876" height="582" key="find.popup/0.0.1920.1040/1920.0.1366.768@1920.0.1366.768" timestamp="1590174181040" />
     <state x="313" y="187" width="1231" height="668" key="find.popup/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587885513447" />
     <state x="1985" y="67" key="new project wizard" timestamp="1587823302281">
       <screen x="1920" y="0" width="1366" height="728" />
@@ -527,10 +720,52 @@
       <screen x="1920" y="0" width="1366" height="728" />
     </state>
     <state x="2259" y="172" key="run.anything.popup/1920.0.1366.728/0.0.1920.1040@1920.0.1366.728" timestamp="1587815838187" />
-    <state x="486" y="70" width="945" height="969" key="search.everywhere.popup" timestamp="1587836592126">
+    <state x="486" y="70" width="945" height="969" key="search.everywhere.popup" timestamp="1590234139219">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="486" y="70" width="945" height="969" key="search.everywhere.popup/0.0.1920.1040/1920.0.1366.768@0.0.1920.1040" timestamp="1590234139219" />
     <state x="486" y="70" width="945" height="969" key="search.everywhere.popup/1920.0.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1587836592126" />
     <state x="2266" y="49" width="672" height="678" key="search.everywhere.popup/1920.0.1366.728/0.0.1920.1040@1920.0.1366.728" timestamp="1587828270907" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/app/controllers/SignUpController.scala</url>
+          <line>28</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/app/controllers/SocialAuthController.scala</url>
+          <line>53</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/app/controllers/SocialAuthController.scala</url>
+          <line>54</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/app/controllers/SocialAuthController.scala</url>
+          <line>56</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/app/controllers/SocialAuthController.scala</url>
+          <line>57</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/app/controllers/SocialAuthController.scala</url>
+          <line>49</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="scala-line">
+          <url>file://$PROJECT_DIR$/app/controllers/SocialAuthController.scala</url>
+          <line>50</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

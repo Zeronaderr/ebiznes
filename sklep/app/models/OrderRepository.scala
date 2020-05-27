@@ -11,7 +11,7 @@ import scala.concurrent.duration.Duration
 import scala.concurrent.{Await, ExecutionContext, Future}
 
 @Singleton
-class OrderRepository @Inject() (dbConfigProvider: DatabaseConfigProvider,customerRepository: CustomerRepository,productRepository: ProductRepository,shipperRepository: ShipperRepository)(implicit ec: ExecutionContext) {
+class OrderRepository @Inject() (dbConfigProvider: DatabaseConfigProvider,val customerRepository: CustomerRepository,val productRepository: ProductRepository,val shipperRepository: ShipperRepository)(implicit ec: ExecutionContext) {
   val dbConfig = dbConfigProvider.get[JdbcProfile]
 
   import dbConfig._
@@ -24,9 +24,9 @@ class OrderRepository @Inject() (dbConfigProvider: DatabaseConfigProvider,custom
     def shipperId = column[Int]("shipperId")
     def orderDate = column[String]("orderDate")
     def orderState = column[Int]("orderState")
-//    def customer_fk = foreignKey("customer_fk",customerId,cst)(_.id)
-//    def product_fk = foreignKey("product_fk",productId,prd)(_.id)
-//    def shipper_fk = foreignKey("shipper_fk",shipperId,shp)(_.id)
+    def customer_fk = foreignKey("customer_fk",customerId,cst)(_.id)
+    def product_fk = foreignKey("product_fk",productId,prd)(_.id)
+    def shipper_fk = foreignKey("shipper_fk",shipperId,shp)(_.id)
     def * = (id, customerId,productId,shipperId,orderDate,orderState) <> ((Order.apply _).tupled, Order.unapply)
   }
 

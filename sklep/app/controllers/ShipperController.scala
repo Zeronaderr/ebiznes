@@ -11,6 +11,7 @@ import play.api.libs.json.{JsError, JsSuccess, JsValue, Json, OWrites}
 import play.api.mvc.{AbstractController, ControllerComponents, MessagesAbstractController, MessagesControllerComponents}
 import play.mvc.BodyParser.AnyContent
 
+
 import scala.concurrent.{ExecutionContext, Future}
 
 class ShipperController @Inject()(shippers: ShipperRepository, cc: MessagesControllerComponents)(implicit ec: ExecutionContext) extends MessagesAbstractController(cc) {
@@ -19,14 +20,14 @@ class ShipperController @Inject()(shippers: ShipperRepository, cc: MessagesContr
     var shipperForUpdate = shippers.getById(id)
         shipperForUpdate.map(c => {
       val catForm = updateShipperForm.fill(UpdateShipperForm(c.id,c.name))
-      Ok(views.html.shipperUpdate(catForm))
+      Ok(views.html.shipper.shipperUpdate(catForm))
     })
   }
   def updateShipperHandle = Action.async { implicit request =>
     updateShipperForm.bindFromRequest.fold(
       errorForm => {
         Future.successful(
-          BadRequest(views.html.shipperUpdate(errorForm))
+          BadRequest(views.html.shipper.shipperUpdate(errorForm))
         )
       },
       shipper => {
@@ -42,14 +43,14 @@ class ShipperController @Inject()(shippers: ShipperRepository, cc: MessagesContr
   }
 
   def addShipper() = Action { implicit request =>
-    Ok(views.html.shipperadd(createShipperForm))
+    Ok(views.html.shipper.shipperadd(createShipperForm))
   }
 
   def addShipperHandle() = Action.async { implicit request =>
     createShipperForm.bindFromRequest.fold(
       errorForm => {
         Future.successful(
-          BadRequest(views.html.shipperadd(errorForm))
+          BadRequest(views.html.shipper.shipperadd(errorForm))
         )
       },
       shipper => {

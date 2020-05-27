@@ -1,61 +1,56 @@
-import React, {useState, useContext} from 'react'
-import { Segment, Form, Button, Dropdown, Select } from 'semantic-ui-react'
-import { IProduct } from '../../../app/modules/product'
-import { IProductCategory } from '../../../app/modules/productCategory';
-import ProductStore from '../../../app/stores/productStore';
+import React, { useContext, useEffect} from 'react'
+import { Image, Button, Card, Grid} from 'semantic-ui-react'
+import { RouteComponentProps } from 'react-router-dom';
+import { observer } from 'mobx-react-lite';
+import AddOrderForm from '../../orders/AddOrderForm';
+import { RootStoreContext } from '../../../app/stores/rootStore';
 
-interface IProps{
-    product: IProduct,
-    productCategories: IProductCategory[],
-    // setEditMode: (editMode: boolean) => void,
-    // handleSubmit: () => void
+interface DetailParams {
+    id:string
 }
 
-export const AddProductForm: React.FC<IProps> = ({product: initializeFormState,productCategories}) => {
+const AddProductForm: React.FC<RouteComponentProps<DetailParams>> = ({match,history}) => {
 
-    const productStore = useContext(ProductStore);
+    const rootStore = useContext(RootStoreContext);
+    const {loadProduct,product,clearProduct,loadCategories,categories,brands} = rootStore.productStore;
+    useEffect(() => {
+        loadProduct(match.params.id);
+    },[loadProduct,clearProduct,match.params.id,loadCategories])
 
-    const initializeForm = () =>
-    {
-        if(initializeFormState)
-        {
-            return initializeFormState;
-        }
-        else {
-            return {
-                id: '',
-                name: '',
-                description: '',
-                categoryId: '',
-                price: '',
-                img: '',
-                brandId: ''
-            }
-        }
-    };
-    const categoriesList = productCategories.map(x => {
-        return {
-            key: x.id,
-            value: x.name,
-            text: x.name
-         }
-    })             
-    
-    const[product,setProduct] = useState<IProduct>(initializeForm)
     return (
-        <Segment clearing>
-            <Form > 
-                <Form.Input placeholder='Name' value={product.name} />
-                <Form.TextArea rows={2} placeholder='Description' value={product.description} />
-                <Dropdown
-                    placeholder='Select Category'
-                    fluid
-                    selection
-                    options={categoriesList}
-                />
-                <Button floated='right' positive type='submit' content='submit' />
-                {/* <Button floated='right' normal type='submit' content='cancel' onClick={() => handleSubmit} /> */}
-            </Form>
-        </Segment>
+        <Grid>
+            <Grid.Column width={10}>
+
+            
+        <Card fluid>
+        <Image src={'/list/logo192.png'} wrapped ui={false} />
+        <Card.Content>
+          <Card.Header>
+              <span>Name: </span>{product?.name}</Card.Header>
+          <Card.Meta>
+          <span>Brand: </span>
+            <span>{brands.filter(x => x.id == product?.brandId)[0]?.name}</span>
+          </Card.Meta>
+          <Card.Meta>
+          <span>Category: </span>
+            <span>{categories.filter(x => x.id == product?.categoryId)[0]?.name}</span>
+          </Card.Meta>
+          <Card.Description>
+          {product?.description}
+          </Card.Description>
+        </Card.Content>
+        <Card.Content extra>
+          <Button.Group width={2}>
+              <Button basic color='grey' content='Back' onClick={() => history.push('/products')} />
+          </Button.Group>
+        </Card.Content>
+      </Card>
+      </Grid.Column>
+      <Grid.Column width={6}>
+        <AddOrderForm product={product!}/>
+      </Grid.Column>
+    </Grid>
     )
 }
+
+export default observer(AddProductForm)

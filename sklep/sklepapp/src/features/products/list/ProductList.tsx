@@ -1,25 +1,24 @@
 import React, { useContext, useEffect } from 'react'
 import { Item, Button, Label, Segment } from 'semantic-ui-react'
-import { IProduct } from '../../../app/modules/product'
-import { IProductCategory } from '../../../app/modules/productCategory'
-import { IBrand } from '../../../app/modules/brand'
 import { observer } from 'mobx-react-lite'
-import ProductStore from '../../../app/stores/productStore'
+import { Link } from 'react-router-dom'
+import { RootStoreContext } from '../../../app/stores/rootStore'
 
-interface IProps {
-    makeOrder: (id:string) => void,
-    categories: IProductCategory[],
-    brands: IBrand[],
-    loaded: boolean,
-    products: IProduct[]
-}
-export const ProductList : React.FC<IProps> = ({makeOrder,categories,brands,loaded,products}) => {
 
-    // const productStore = useContext(ProductStore)
+export const ProductList : React.FC = () => {
+
+
+    const rootStore = useContext(RootStoreContext)
+    const {brands,categories,clearProduct,loadProducts} = rootStore.productStore
+    useEffect(() => {
+        clearProduct();
+        loadProducts();
+
+    }, [clearProduct,loadProducts,])
     return (
         <Segment clearing>
             <Item.Group divided>
-                {products.map(prod =>
+                {Array.from(rootStore.productStore.productRegistry.values()).map(prod =>
                     (
                         <Item>
                             <Item.Image
@@ -29,7 +28,7 @@ export const ProductList : React.FC<IProps> = ({makeOrder,categories,brands,load
                             style={{ marginBottom: 3 }}
                             />
                         <Item.Content>
-                            <Item.Header as='a'>{prod.name}</Item.Header>
+                            <Item.Header >{prod.name}</Item.Header>
                             <Item.Description>
                                 <div>More info: {prod.description}</div>
                             </Item.Description>
@@ -40,7 +39,7 @@ export const ProductList : React.FC<IProps> = ({makeOrder,categories,brands,load
                                 <div>Price: {prod.price}</div>
                             </Item.Description>
                             <Item.Extra>
-                                <Button floated='right' content='Make order' color='blue' onClick={() => makeOrder(prod.id)} />
+                                <Button floated='right' content='Make order' color='blue' as={Link} to={`/product/${prod.id}`} />
                                 <Label basic content={categories.filter(c => c.id == prod.categoryId)[0]?.name} />
                             </Item.Extra>
                         </Item.Content>

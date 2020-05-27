@@ -19,14 +19,14 @@ class DiscountController @Inject()(discountRepo: DiscountRepository, cc: Message
     var DiscountForUpdate = discountRepo.getById(id)
     DiscountForUpdate.map(c => {
       val catForm = updateDiscountForm.fill(UpdateDiscountForm(c.id,c.value))
-      Ok(views.html.discountupdate(catForm))
+      Ok(views.html.discount.discountupdate(catForm))
     })
   }
   def updateDiscountHandle = Action.async { implicit request =>
     updateDiscountForm.bindFromRequest.fold(
       errorForm => {
         Future.successful(
-          BadRequest(views.html.discountupdate(errorForm))
+          BadRequest(views.html.discount.discountupdate(errorForm))
         )
       },
       discount => {
@@ -42,14 +42,14 @@ class DiscountController @Inject()(discountRepo: DiscountRepository, cc: Message
   }
 
   def addDiscount() = Action { implicit request =>
-    Ok(views.html.discountadd(createDiscountForm))
+    Ok(views.html.discount.discountadd(createDiscountForm))
   }
 
   def addDiscountHandle() = Action.async { implicit request =>
     createDiscountForm.bindFromRequest.fold(
       errorForm => {
         Future.successful(
-          BadRequest(views.html.discountadd(errorForm))
+          BadRequest(views.html.discount.discountadd(errorForm))
         )
       },
       Discount => {

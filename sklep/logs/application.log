@@ -1,132 +1,39 @@
-2020-05-08 19:59:19,497 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-6 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
-2020-05-08 19:59:20,997 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-6 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2020-05-27 10:31:25,654 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-8 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
+2020-05-27 10:31:28,945 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-8 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-    filters.ExampleFilter
+    play.filters.cors.CORSFilter
     play.filters.cors.CORSFilter
 
-2020-05-08 19:59:21,007 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-6 - Application started (Dev) (no global state)
-2020-05-08 22:20:01,455 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-11 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
-2020-05-08 22:20:01,786 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-11 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-    filters.ExampleFilter
-    play.filters.cors.CORSFilter
-
-2020-05-08 22:20:01,792 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-11 - Application started (Dev) (no global state)
-2020-05-08 22:20:42,667 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-11 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
-2020-05-08 22:20:43,030 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-11 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-    filters.ExampleFilter
-    play.filters.cors.CORSFilter
-
-2020-05-08 22:20:43,040 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-11 - Application started (Dev) (no global state)
-2020-05-08 22:20:52,639 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-10 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
-2020-05-08 22:20:52,757 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-10 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-    filters.ExampleFilter
-    play.filters.cors.CORSFilter
-
-2020-05-08 22:20:52,761 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-10 - Application started (Dev) (no global state)
-2020-05-08 22:21:31,645 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-9 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
-2020-05-08 22:21:31,821 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-9 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-    filters.ExampleFilter
-    play.filters.cors.CORSFilter
-
-2020-05-08 22:21:31,826 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-9 - Application started (Dev) (no global state)
-2020-05-08 22:23:54,972 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-13 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
-2020-05-08 22:23:55,107 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-13 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-    filters.ExampleFilter
-    play.filters.cors.CORSFilter
-
-2020-05-08 22:23:55,111 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-13 - Application started (Dev) (no global state)
-2020-05-08 22:24:13,400 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-9 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
-2020-05-08 22:24:13,968 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-9 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-    filters.ExampleFilter
-    play.filters.cors.CORSFilter
-
-2020-05-08 22:24:13,971 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-9 - Application started (Dev) (no global state)
-2020-05-08 22:24:30,246 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-9 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
-2020-05-08 22:24:30,352 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-9 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-    filters.ExampleFilter
-    play.filters.cors.CORSFilter
-
-2020-05-08 22:24:30,355 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-9 - Application started (Dev) (no global state)
-2020-05-08 22:24:45,717 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-9 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
-2020-05-08 22:24:46,192 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-9 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-    filters.ExampleFilter
-    play.filters.cors.CORSFilter
-
-2020-05-08 22:24:46,195 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-9 - Application started (Dev) (no global state)
-2020-05-08 22:25:03,954 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-8 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
-2020-05-08 22:25:04,349 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-8 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-    filters.ExampleFilter
-    play.filters.cors.CORSFilter
-
-2020-05-08 22:25:04,351 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-8 - Application started (Dev) (no global state)
-2020-05-08 22:25:45,262 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-13 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
-2020-05-08 22:25:45,377 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-13 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-    filters.ExampleFilter
-    play.filters.cors.CORSFilter
-
-2020-05-08 22:25:45,379 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-13 - Application started (Dev) (no global state)
-2020-05-08 22:27:48,868 [WARN] from slick.basic.DatabaseConfig in play-dev-mode-akka.actor.default-dispatcher-6 - Use `profile` instead of `driver`. The latter is deprecated since Slick 3.2 and will be removed.
-2020-05-08 22:27:49,006 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-6 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-    filters.ExampleFilter
-    play.filters.cors.CORSFilter
-
-2020-05-08 22:27:49,015 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-6 - Application started (Dev) (no global state)
+2020-05-27 10:31:28,960 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-8 - Application started (Dev) (no global state)
+2020-05-27 10:50:59,092 [WARN] from com.zaxxer.hikari.pool.HikariPool in db housekeeper - db - Thread starvation or clock leap detected (housekeeper delta=3m3s362ms497µs700ns).
+2020-05-27 10:51:01,888 [ERROR] from controllers.SocialAuthController in application-akka.actor.default-dispatcher-7 - Unexpected provider error
+com.mohiva.play.silhouette.api.exceptions.ProviderException: None of the registered handlers can handle the given state item: ItemStructure(csrf-state,{"token":"959f0146d506a76ce240e00d9ef58ed06649c1113cf2e51afcc970445c54c912ba40b706fa232ea0c57c1796b053b6acd00cddf0b3de32af8426f51a0f432dab6f5986c49202ea522d6b907b993a7207c7fadd14578725d8fcf923f5d55f0138e6ac0b3584c2b8e43ea12b85a06a342569a58b1a7d4a1af74cb845d5c85e6ed6"})
+	at com.mohiva.play.silhouette.impl.providers.DefaultSocialStateHandler.$anonfun$unserialize$2(SocialStateProvider.scala:291)
+	at scala.collection.immutable.List.map(List.scala:283)
+	at com.mohiva.play.silhouette.impl.providers.DefaultSocialStateHandler.$anonfun$unserialize$1(SocialStateProvider.scala:288)
+	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:302)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:37)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
+	at scala.concurrent.impl.ExecutionContextImpl$AdaptedForkJoinTask.exec(ExecutionContextImpl.scala:140)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+2020-05-27 10:51:03,068 [ERROR] from controllers.SocialAuthController in application-akka.actor.default-dispatcher-14 - Unexpected provider error
+com.mohiva.play.silhouette.api.exceptions.ProviderException: None of the registered handlers can handle the given state item: ItemStructure(csrf-state,{"token":"959f0146d506a76ce240e00d9ef58ed06649c1113cf2e51afcc970445c54c912ba40b706fa232ea0c57c1796b053b6acd00cddf0b3de32af8426f51a0f432dab6f5986c49202ea522d6b907b993a7207c7fadd14578725d8fcf923f5d55f0138e6ac0b3584c2b8e43ea12b85a06a342569a58b1a7d4a1af74cb845d5c85e6ed6"})
+	at com.mohiva.play.silhouette.impl.providers.DefaultSocialStateHandler.$anonfun$unserialize$2(SocialStateProvider.scala:291)
+	at scala.collection.immutable.List.map(List.scala:283)
+	at com.mohiva.play.silhouette.impl.providers.DefaultSocialStateHandler.$anonfun$unserialize$1(SocialStateProvider.scala:288)
+	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:302)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:37)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
+	at scala.concurrent.impl.ExecutionContextImpl$AdaptedForkJoinTask.exec(ExecutionContextImpl.scala:140)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)

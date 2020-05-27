@@ -19,14 +19,14 @@ class BrandController @Inject()(brands: BrandRepository, cc: MessagesControllerC
     var BrandForUpdate = brands.getById(id)
     BrandForUpdate.map(c => {
       val catForm = updateBrandForm.fill(UpdateBrandForm(c.id,c.name))
-      Ok(views.html.brandupdate(catForm))
+      Ok(views.html.brand.brandupdate(catForm))
     })
   }
   def updateBrandHandle = Action.async { implicit request =>
     updateBrandForm.bindFromRequest.fold(
       errorForm => {
         Future.successful(
-          BadRequest(views.html.brandupdate(errorForm))
+          BadRequest(views.html.brand.brandupdate(errorForm))
         )
       },
       brand => {
@@ -42,14 +42,14 @@ class BrandController @Inject()(brands: BrandRepository, cc: MessagesControllerC
   }
 
   def addBrand() = Action { implicit request =>
-    Ok(views.html.brandadd(createBrandForm))
+    Ok(views.html.brand.brandadd(createBrandForm))
   }
 
   def addBrandHandle() = Action.async { implicit request =>
     createBrandForm.bindFromRequest.fold(
       errorForm => {
         Future.successful(
-          BadRequest(views.html.brandadd(errorForm))
+          BadRequest(views.html.brand.brandadd(errorForm))
         )
       },
       brand => {

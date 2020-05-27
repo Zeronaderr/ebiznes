@@ -5,24 +5,39 @@
 @flash.get("success").getOrElse("")
 
 @form(routes.ProductController.updateProductHandle()) {
+    <ul>
+
     @helper.CSRF.formField
     <input name="id" id="id" value="@product("id").value" type="hidden" />
-    @inputText(product("name"))
-    @inputText(product("description"))
-    @inputText(product("price"))
-    @inputText(product("img"))
+    <li>
+        @inputText(product("name"))
+    </li>
+    <li>
+        @inputText(product("description"))
+    </li>
+    <li>
+        @inputText(product("price"))
+    </li>
+    <li>
+        @inputText(product("img"))
+    </li>
 
-    <select name="categoryId" id="categoryId">
-    @for(cat <- category){
-        @if(cat.id.toString==product("categoryId").value.getOrElse(0)) {
-            <option value="@cat.id" selected>@cat.name</option>
-        }else{
-            <option value="@cat.id">@cat.name</option>
+    <li>
+        <p>Kategoria</p>
+        <select name="categoryId" id="categoryId">
+        @for(cat <- category){
+            @if(cat.id.toString==product("categoryId").value.getOrElse(0)) {
+                <option value="@cat.id" selected>@cat.name</option>
+            }else{
+                <option value="@cat.id">@cat.name</option>
+            }
+
         }
+        </select>
+    </li>
 
-    }
-    </select>
-
+<li>
+    <p>Marka</p>
     <select name="brandId" id="brandId">
     @for(bra <- brands){
         @if(bra.id.toString == product("brandId").value.getOrElse((0))) {
@@ -32,10 +47,12 @@
         }
     }
     </select>
-
+</li>
 
     <div class="buttons">
         <input type="submit" value="Update Product"/>
     </div>
+</ul>
+
 }
 <a href="@controllers.routes.ProductController.deleteProduct(product("id").value.get.toInt)">Delete</a>

@@ -7,7 +7,7 @@ import slick.jdbc.JdbcProfile
 import scala.concurrent.{ExecutionContext, Future}
 
 @Singleton
-class PaymentRepository @Inject() (dbConfigProvider: DatabaseConfigProvider,orderRepository: OrderRepository)(implicit ec: ExecutionContext) {
+class PaymentRepository @Inject() (dbConfigProvider: DatabaseConfigProvider,val orderRepository: OrderRepository)(implicit ec: ExecutionContext) {
   val dbConfig = dbConfigProvider.get[JdbcProfile]
 
   import dbConfig._
@@ -16,7 +16,7 @@ class PaymentRepository @Inject() (dbConfigProvider: DatabaseConfigProvider,orde
   class PaymentTable(tag: Tag) extends Table[Payment](tag, "Payment") {
     def id = column[Int]("id", O.PrimaryKey, O.AutoInc)
     def orderId = column[Int]("orderId")
-//    def order_fk = foreignKey("order_fk",orderId,ord)(_.id)
+    def order_fk = foreignKey("order_fk",orderId,ord)(_.id)
     def * = (id, orderId) <> ((Payment.apply _).tupled, Payment.unapply)
   }
   import orderRepository.OrderTable

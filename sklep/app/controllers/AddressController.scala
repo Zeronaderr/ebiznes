@@ -23,14 +23,14 @@ class AddressController @Inject()(addresses: AddressRepository, cc: MessagesCont
     var AddressForUpdate = addresses.getById(id)
     AddressForUpdate.map(c => {
       val adrForm = updateAddressForm.fill(UpdateAddressForm(c.id,c.address))
-      Ok(views.html.addressupdate(adrForm))
+      Ok(views.html.address.addressupdate(adrForm))
     })
   }
   def updateAddressHandle = Action.async { implicit request =>
     updateAddressForm.bindFromRequest.fold(
       errorForm => {
         Future.successful(
-          BadRequest(views.html.addressupdate(errorForm))
+          BadRequest(views.html.address.addressupdate(errorForm))
         )
       },
       address => {
@@ -42,7 +42,7 @@ class AddressController @Inject()(addresses: AddressRepository, cc: MessagesCont
   }
 
   def addAddress() = Action { implicit request =>
-    Ok(views.html.addressadd(createAddressForm))
+    Ok(views.html.address.addressadd(createAddressForm))
   }
 
   def addAddressHandle() = Action.async { implicit request =>

@@ -53,7 +53,7 @@ class ProductController @Inject()(productsRepo: ProductRepository, categoryRepo:
     productForm.bindFromRequest.fold(
       errorForm => {
         Future.successful(
-          BadRequest(views.html.productadd(errorForm, categ,branq))
+          BadRequest(views.html.product.productadd(errorForm, categ,branq))
         )
       },
       product => {
@@ -81,7 +81,7 @@ class ProductController @Inject()(productsRepo: ProductRepository, categoryRepo:
     updateProductForm.bindFromRequest.fold(
       errorForm => {
         Future.successful(
-          BadRequest(views.html.productupdate(errorForm, categ,branq))
+          BadRequest(views.html.product.productupdate(errorForm, categ,branq))
         )
       },
       product => {
@@ -96,14 +96,14 @@ class ProductController @Inject()(productsRepo: ProductRepository, categoryRepo:
   def getProduct(id: Long) = Action.async { implicit request =>
     var product = productsRepo.getByIdOption(id)
     product.map(x => x match {
-      case Some(p) => Ok(views.html.product(p))
+      case Some(p) => Ok(views.html.product.product(p))
       case None => Redirect(routes.ProductController.getProducts())
     })
   }
 
   def getProducts() = Action.async { implicit request =>
     var productsrepo = productsRepo.list()
-    productsrepo.map(x => Ok(views.html.products(x)))
+    productsrepo.map(x => Ok(views.html.product.products(x)))
   }
 
   def updateProduct(id: Long) = Action.async { implicit request =>
@@ -121,7 +121,7 @@ class ProductController @Inject()(productsRepo: ProductRepository, categoryRepo:
     productForUpdate.map(product => {
       val prodForm = updateProductForm.fill(UpdateProductForm(product.id,product.name,product.description,
         product.categoryId,product.price.toInt,product.img,product.brandId))
-      Ok(views.html.productupdate(prodForm,cat,branq))
+      Ok(views.html.product.productupdate(prodForm,cat,branq))
     })
   }
 
@@ -139,7 +139,7 @@ class ProductController @Inject()(productsRepo: ProductRepository, categoryRepo:
         cat = c
       }
     }
-    Await.result(cats.map(c => bra.map(b => Ok(views.html.productadd(productForm,c,b)))),Duration.Inf);
+    Await.result(cats.map(c => bra.map(b => Ok(views.html.product.productadd(productForm,c,b)))),Duration.Inf);
 
   }
 

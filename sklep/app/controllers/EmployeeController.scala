@@ -40,7 +40,7 @@ class EmployeeController @Inject()(employeesRepo: EmployeeRepository, addresses:
     EmployeeForm.bindFromRequest.fold(
       errorForm => {
         Future.successful(
-          BadRequest(views.html.employeeadd(errorForm, categ))
+          BadRequest(views.html.employee.employeeadd(errorForm, categ))
         )
       },
       Employee => {
@@ -62,7 +62,7 @@ class EmployeeController @Inject()(employeesRepo: EmployeeRepository, addresses:
     updateEmployeeForm.bindFromRequest.fold(
       errorForm => {
         Future.successful(
-          BadRequest(views.html.employeeupdate(errorForm,adrs))
+          BadRequest(views.html.employee.employeeupdate(errorForm,adrs))
         )
       },
       employee => {
@@ -83,7 +83,7 @@ class EmployeeController @Inject()(employeesRepo: EmployeeRepository, addresses:
     }
     EmployeeForUpdate.map(Employee => {
       val prodForm = updateEmployeeForm.fill(UpdateEmployeeForm(Employee.id,Employee.firstName,Employee.lastName,Employee.addressId))
-      Ok(views.html.employeeupdate(prodForm,cat))
+      Ok(views.html.employee.employeeupdate(prodForm,cat))
     })
     // update values
     // save
@@ -97,7 +97,7 @@ class EmployeeController @Inject()(employeesRepo: EmployeeRepository, addresses:
 
   def addEmployee() = Action.async { implicit request =>
     val adr = addresses.list()
-    adr.map(c => Ok(views.html.employeeadd(EmployeeForm,c)))
+    adr.map(c => Ok(views.html.employee.employeeadd(EmployeeForm,c)))
     //    Ok(views.html.index("Employee added"))
   }
 

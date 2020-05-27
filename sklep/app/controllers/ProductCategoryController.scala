@@ -22,31 +22,27 @@ class ProductCategoryController @Inject()(categories: ProductCategoryRepository,
   def getProductCategory(id: Int) = Action.async { implicit request =>
     var productCategory = categories.getByIdAsync(id) // get product from db
     productCategory.map(x => x match {
-      case Some(p) => Ok(views.html.productCategory(p))
+      case Some(p) => Ok(views.html.productCategory.productCategory(p))
       case None => Redirect(routes.ProductCategoryController.getProductCategories())
     })
-//    Json.toJson(productCategory)
-//    Ok(views.html.index("Product category for id = " + id))
   }
 
   def getProductCategories() = Action.async { implicit request =>
     var productCategoriesRepo = categories.list() // get all products
-//    productCategoriesRepo.map(pc => Ok(views.html.productcategories(pc)))
       productCategoriesRepo.map(pc => Ok(Json.toJson(pc)))
-//    Ok(Json.toJson(productCategoriesRepo))
   }
   def updateProductCategory(id:Int) = Action.async { implicit request =>
     var productCatForUpdate = categories.getById(id)
     productCatForUpdate.map(c => {
       val catForm = updateProductCategoryForm.fill(UpdateProductCategoryForm(c.id,c.name))
-      Ok(views.html.productCategoryUpdate(catForm))
+      Ok(views.html.productCategory.productCategoryUpdate(catForm))
     })
   }
   def updateProductCategoryHandle = Action.async { implicit request =>
     updateProductCategoryForm.bindFromRequest.fold(
       errorForm => {
         Future.successful(
-          BadRequest(views.html.productCategoryUpdate(errorForm))
+          BadRequest(views.html.productCategory.productCategoryUpdate(errorForm))
         )
       },
       category => {
@@ -62,14 +58,14 @@ class ProductCategoryController @Inject()(categories: ProductCategoryRepository,
   }
 
   def addProductCategory() = Action { implicit request =>
-    Ok(views.html.productCategoryAdd(createProductCategoryForm))
+    Ok(views.html.productCategory.productCategoryAdd(createProductCategoryForm))
   }
 
   def addProductCategoryHandle() = Action.async { implicit request =>
     createProductCategoryForm.bindFromRequest.fold(
       errorForm => {
         Future.successful(
-          BadRequest(views.html.productCategoryAdd(errorForm))
+          BadRequest(views.html.productCategory.productCategoryAdd(errorForm))
         )
       },
       category => {
