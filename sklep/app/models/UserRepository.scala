@@ -44,7 +44,9 @@ class UserRepository @Inject()(dbConfigProvider: DatabaseConfigProvider)(implici
   def getById(id: Long): Future[UserDTO] = db.run{
     userRepo.filter(_.id === id).result.head
   }
-
+  def getByEmail(email: String): Future[UserDTO] = db.run {
+    userRepo.filter(_.email === email).result.head
+  }
   def update(id: Long, newUser: UserDTO): Future[Unit] = {
     val userToUpdate: UserDTO = newUser.copy(id)
     db.run(userRepo.filter(_.id === id).update(userToUpdate)).map(_ => ())
@@ -54,11 +56,8 @@ class UserRepository @Inject()(dbConfigProvider: DatabaseConfigProvider)(implici
     userRepo.result
   }
 
-
-
   override def retrieve(loginInfo: LoginInfo): Future[Option[User]] = db.run {
-      userRepo.filter(_.providerId === loginInfo.providerID)
-              .filter(_.providerKey === loginInfo.providerKey).result.headOption.map(x => x.map(y => ConvertToUser(y)))
+      userRepo.filter(x => x.providerId === loginInfo.providerID && x.providerKey === loginInfo.providerKey).result.headOption.map(x => x.map(y => ConvertToUser(y)))
   }
 
   def ConvertToUser(u: UserDTO) =

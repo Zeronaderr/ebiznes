@@ -7,7 +7,7 @@ import com.mohiva.play.silhouette.api.repositories.AuthInfoRepository
 import com.mohiva.play.silhouette.api.services.AuthenticatorService
 import com.mohiva.play.silhouette.impl.providers._
 import com.mohiva.play.silhouette.impl.providers.oauth2.GoogleProvider
-import models.{User, UserRepository}
+import models.{CustomerRepository, User, UserRepository}
 import play.api.i18n.{I18nSupport, Messages}
 import play.api.libs.json.Json
 import play.api.mvc._
@@ -24,6 +24,7 @@ class SocialAuthController @Inject() (
                  silhouette: Silhouette[DefaultEnv],
                  userService: UserRepository,
                  addToken: CSRFAddToken,
+                 customerRepo: CustomerRepository,
                  socialProviderRegistry: SocialProviderRegistry,
                  cc: MessagesControllerComponents) (implicit ec: ExecutionContext)
 extends AbstractController(cc) with I18nSupport with Logger {
@@ -40,7 +41,7 @@ extends AbstractController(cc) with I18nSupport with Logger {
               authenticator <- silhouette.env.authenticatorService.create(profile.loginInfo)
               token <- silhouette.env.authenticatorService.init(authenticator)
               result <- silhouette.env.authenticatorService.embed(token, Redirect("http://localhost:3000/products"))
-            } yield result.withCookies(Cookie("token",token, httpOnly = false))
+            } yield result.withCookies(Cookie("token",token, httpOnly = false),Cookie("username", user.email, httpOnly=false),Cookie("userId",user.id.toString,httpOnly=false))
             //              {
             //              silhouette.env.eventBus.publish(LoginEvent(user, request))
             //              Ok(Json.obj("token" -> result))

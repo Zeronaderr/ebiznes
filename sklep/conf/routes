@@ -60,7 +60,11 @@ GET  /deletediscount/:id          controllers.DiscountController.deleteDiscount(
     GET     /api/order/:id                controllers.OrderController.getOrderApi(id: Int)
     GET     /api/orders                   controllers.OrderController.getOrdersApi()
     POST    /api/addorder                 controllers.OrderController.addOrderApi()
-GET  /deleteorder/:id          controllers.OrderController.deleteOrder(id: Int)
+    POST    /api/makeOrder                controllers.OrderController.makeOrderApi()
+    POST    /updateorderhandle        controllers.OrderController.updateOrderHandle()
+    GET     /updateorder/:id          controllers.OrderController.updateOrder(id: Int)
+    GET     /api/ordersbyuser/:id         controllers.OrderController.getOrdersByUserApi(id: Long)
+    GET  /deleteorder/:id          controllers.OrderController.deleteOrder(id: Int)
 # shippers
     GET     /api/shipper/:id                controllers.ShipperController.getShipperApi(id: Int)
     GET     /api/shippers                   controllers.ShipperController.getShippersApi()

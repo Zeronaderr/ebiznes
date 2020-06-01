@@ -10,23 +10,24 @@ import AddOrderForm from './features/orders/AddOrderForm';
 import AddProductForm from './features/products/forms/AddProductForm';
 import {  RootStoreContext } from './app/stores/rootStore';
 import LoginForm from './features/user/LoginForm';
+import HomePage from './features/home/HomePage';
 
 const App: React.FC<RouteComponentProps> = ({location}) => {
   const rootStore = useContext(RootStoreContext);
   const {
-  loadOrders,loadProducts,loadShippers,loadBrands
+  loadProducts,loadShippers,loadBrands
   } = rootStore.productStore;
 
   useEffect(() => {
-    loadOrders();
+    // loadOrders();
     loadProducts();
     loadShippers();
     loadBrands();
-    },[loadOrders,loadProducts,loadShippers,loadBrands]);
+    },[loadProducts,loadShippers,loadBrands]);
 
   return (
     <Fragment>
-      <Route exact path='/' component={LoginForm} />
+      <Route exact path='/' component={HomePage} />
       <Route path={'/(.+)'} render={() => (
             <Fragment>
               <NavBar />

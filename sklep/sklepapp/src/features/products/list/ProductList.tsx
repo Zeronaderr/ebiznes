@@ -9,22 +9,22 @@ export const ProductList : React.FC = () => {
 
 
     const rootStore = useContext(RootStoreContext)
-    const {brands,categories,clearProduct,loadProducts} = rootStore.productStore
+    const {brands,categories,clearProduct,loadProducts,productsByCategory} = rootStore.productStore
+    const {userToken} = rootStore.userStore
     useEffect(() => {
         clearProduct();
         loadProducts();
-
-    }, [clearProduct,loadProducts,])
+        userToken();
+    }, [clearProduct,loadProducts,userToken])
     return (
         <Segment clearing>
             <Item.Group divided>
-                {Array.from(rootStore.productStore.productRegistry.values()).map(prod =>
+                {productsByCategory.map(prod =>
                     (
                         <Item>
                             <Item.Image
                             size='tiny'
-                            circular
-                            src={'logo192.png'}
+                            src={`${prod.img}.png`}
                             style={{ marginBottom: 3 }}
                             />
                         <Item.Content>
@@ -39,7 +39,7 @@ export const ProductList : React.FC = () => {
                                 <div>Price: {prod.price}</div>
                             </Item.Description>
                             <Item.Extra>
-                                <Button floated='right' content='Make order' color='blue' as={Link} to={`/product/${prod.id}`} />
+                                <Button floated='right' content='Szczegóły' color='blue' as={Link} to={`/product/${prod.id}`} />
                                 <Label basic content={categories.filter(c => c.id == prod.categoryId)[0]?.name} />
                             </Item.Extra>
                         </Item.Content>

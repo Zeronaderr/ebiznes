@@ -1,9 +1,10 @@
 package models
 
-import java.util.Date
+import java.util.{Calendar, Date}
 
 import akka.http.scaladsl.model.DateTime
 import javax.inject.{Inject, Singleton}
+import models.requests.OrderListResponse
 import play.api.db.slick.DatabaseConfigProvider
 import slick.jdbc.JdbcProfile
 
@@ -11,7 +12,7 @@ import scala.concurrent.duration.Duration
 import scala.concurrent.{Await, ExecutionContext, Future}
 
 @Singleton
-class OrderRepository @Inject() (dbConfigProvider: DatabaseConfigProvider,val customerRepository: CustomerRepository,val productRepository: ProductRepository,val shipperRepository: ShipperRepository)(implicit ec: ExecutionContext) {
+class OrderRepository @Inject() (dbConfigProvider: DatabaseConfigProvider,val userRepo: UserRepository,val customerRepository: CustomerRepository,val addressRepository: AddressRepository,val productRepository: ProductRepository,val shipperRepository: ShipperRepository)(implicit ec: ExecutionContext) {
   val dbConfig = dbConfigProvider.get[JdbcProfile]
 
   import dbConfig._
@@ -64,6 +65,16 @@ class OrderRepository @Inject() (dbConfigProvider: DatabaseConfigProvider,val cu
     val new_order: Order = new Order(orderId,order.customerId,order.productId,order.shipperId,order.orderDate,2)
     update(orderId,new_order)
     orderRepo.result
+  }
+
+  def handleOrderRequest(userId: Long, productId: Long, shipperId: Int, address: String): Future[Order] = db.run {
+    val addr = Await.result(addressRepository.getAddressByName(address),Duration.Inf);
+    val customerId = Await.result(customerRepository.getByUserId(userId,addr.id),Duration.Inf);
+    return create(customerId.id,productId,shipperId,Calendar.getInstance().getTime().toString,1);
+  }
+
+  def listByUser(cstId: Int): Future[Seq[Order]] = db.run {
+    orderRepo.filter(x => x.customerId === cstId).result
   }
 
   def delete(id: Int): Future[Unit] = db.run(orderRepo.filter(_.id === id).delete).map(_ => ())

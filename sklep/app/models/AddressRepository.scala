@@ -4,7 +4,9 @@ import javax.inject.{Inject, Singleton}
 import play.api.db.slick.DatabaseConfigProvider
 import slick.jdbc.JdbcProfile
 
-import scala.concurrent.{ExecutionContext, Future}
+import scala.concurrent.duration.{Duration, FiniteDuration}
+import scala.concurrent.{Await, ExecutionContext, Future}
+import scala.util.{Failure, Success, Try}
 
 @Singleton
 class AddressRepository @Inject() (dbConfigProvider: DatabaseConfigProvider)(implicit ec: ExecutionContext) {
@@ -39,6 +41,13 @@ class AddressRepository @Inject() (dbConfigProvider: DatabaseConfigProvider)(imp
       returning addressRepo.map(_.id)
       into ((address, id) => Address(id, address))
       ) += address
+  }
+
+  def getAddressByName(address: String): Future[Address] = db.run {
+    addressRepo.filter(_.address === address).result.headOption.map{
+      case Some(addr: Address) => addr
+      case None => Await.result(create(address),Duration.Inf)
+    };
   }
 
   def delete(id: Int): Future[Unit] = db.run(addressRepo.filter(_.id === id).delete).map(_ => ())

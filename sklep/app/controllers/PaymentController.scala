@@ -1,14 +1,18 @@
 package controllers
 
+import com.mohiva.play.silhouette.api.Silhouette
 import javax.inject.Inject
 import models.{OrderRepository, Payment, PaymentRepository}
 import play.api.libs.json.Json
 import play.api.mvc
 import play.api.mvc.{Action, AnyContent, MessagesAbstractController, MessagesControllerComponents}
+import utils.DefaultEnv
 
 import scala.concurrent.ExecutionContext
 
-class PaymentController @Inject()(PaymentRepo: PaymentRepository, cc: MessagesControllerComponents,orderRepository: OrderRepository)(implicit ec: ExecutionContext) extends MessagesAbstractController(cc) {
+class PaymentController @Inject()(PaymentRepo: PaymentRepository, cc: MessagesControllerComponents,orderRepository: OrderRepository,
+                                  silhouette: Silhouette[DefaultEnv])
+                                 (implicit ec: ExecutionContext) extends MessagesAbstractController(cc) {
 
   def deletePayment(id: Int): mvc.Action[mvc.AnyContent] = Action { implicit request =>
     PaymentRepo.delete(id)
@@ -30,6 +34,9 @@ class PaymentController @Inject()(PaymentRepo: PaymentRepository, cc: MessagesCo
   }
   def addPaymentApi(): Action[AnyContent] = Action { implicit request =>
     val req = request.body.asJson.get
+    val token = request.headers.get("Csrf-Token");
+//    silhouette.env.authenticatorService.
+//    userRepo.
     var Payment:Payment = req.as[Payment]
     PaymentRepo.create(Payment.orderId)
     orderRepository.payForOrder(Payment.orderId)

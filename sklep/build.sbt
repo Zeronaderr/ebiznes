@@ -24,6 +24,4 @@ libraryDependencies ++= Seq(
   ehcache, ws , specs2 % Test , guice,"org.xerial" % "sqlite-jdbc" % "3.30.1")
 //libraryDependencies ++= Seq( jdbc , ehcache , ws , specs2 % Test , guice )
 
-unmanagedResourceDirectories in Test <+=  baseDirectory ( _ /"target/web/public/test" )  
-
       

@@ -1,0 +1,34 @@
+@(order: Form[UpdateOrderForm],products: Seq[Product],customers: Seq[Customer],shippers: Seq[Shipper])(implicit request: MessagesRequestHeader, flash: Flash)
+
+@import helper._
+
+@flash.get("success").getOrElse("")
+
+@form(routes.OrderController.updateOrderHandle()) {
+    @helper.CSRF.formField
+    <input name="id" id="id" value="@order("id").value" type="hidden" />
+    <input name="customerId" id="customerId" value="@order("customerId").value" type="hidden" />
+    <input name="productId" id="productId" value="@order("productId").value" type="hidden" />
+    <input name="shipperId" id="shipperId" value="@order("shipperId").value" type="hidden" />
+@*    <select name="customerId" id="customerId">*@
+@*    @for(customer <- customers){*@
+@*        <option value="@customer.id">@customer.firstName @customer.lastName</option>*@
+@*    }*@
+@*    </select>*@
+@*    <select name="productId" id="productId">*@
+@*    @for(product <- products){*@
+@*        <option value="@product.id">@product.name</option>*@
+@*    }*@
+@*    </select>*@
+@*    <select name="shipperId" id="shipperId">*@
+@*    @for(shipper <- shippers){*@
+@*        <option value="@shipper.id">@shipper.name</option>*@
+@*    }*@
+@*    </select>*@
+    @inputText(order("orderDate"))
+    @inputText(order("orderState"))
+    <div class="buttons">
+        <input type="submit" value="Update Order"/>
+    </div>
+}
+<a href="@controllers.routes.OrderController.deleteOrder(order("id").value.get.toInt)">Delete</a>
